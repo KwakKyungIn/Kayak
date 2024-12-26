@@ -70,7 +70,7 @@ body {
 /* 첫 번째 슬라이드 스타일 */
 /* 첫 번째 슬라이드 스타일 */
 #slide-1 {
-    background-image: url('../image/product_list/background/main_background.png'); /* 배경 이미지 경로 */
+    background-image: url('/product_list/background/main_background.png'); /* 배경 이미지 경로 */
     background-size: cover; /* 이미지를 슬라이드에 꽉 차게 */
     background-position: center; /* 이미지 중심 정렬 */
     background-repeat: no-repeat; /* 이미지 반복 방지 */
@@ -706,7 +706,7 @@ body {
     /* position: relative; */
 /* } */
 .detail_page-section1 {
-background-image: url('../image/product_list/background/main_background.png');
+background-image: url('/product_list/background/main_background.png');
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
@@ -783,7 +783,7 @@ position: relative;
 
 /* 배경 섹션 */
 .book_page-section1 {
-    background-image: url('../image/product_list/background/main_background.png');
+    background-image: url('/product_list/background/main_background.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
