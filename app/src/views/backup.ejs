@@ -97,54 +97,82 @@
                         <form class="form-container">
                             <!-- 성함 -->
                             <div class="form-group">
-                              <label for="name">성함</label>
-                              <div class = "form-group-fixed">곽경인</div>
+                              <label for="name">성함 <span style="color: red;">*</span></label>
+                              <input type="text" id="name" placeholder="15자 이내로 입력해주세요." required>
                             </div>
                             <!-- 휴대전화 -->
                             <div class="form-group">
-                              <label for="mobile">휴대전화</label>
+                              <label for="mobile">휴대전화 <span style="color: red;">*</span></label>
                               <div class="inline-fields">
-                                <div class = "form-group-fixed">010 - 7496 - 6307</div>
+                                <select class="small-input">
+                                  <option>010</option>
+                                  <option>011</option>
+                                  <option>016</option>
+                                </select>
+                                <input type="text" class="small-input" placeholder="123456789" required>
                               </div>
                             </div>
                             <!-- 예비전화 -->
                             <div class="form-group">
                               <label for="backup-phone">예비전화</label>
                               <div class="inline-fields">
-                                <div class = "form-group-fixed">010 - 7496 - 6307</div>
+                                <select class="small-input">
+                                  <option>010</option>
+                                  <option>011</option>
+                                  <option>016</option>
+                                </select>
+                                <input type="text" class="small-input" placeholder="123456789">
                               </div>
                             </div>
                             <!-- 대여일/시간 -->
                             <div class="form-group">
-                              <label for="rental-date">대여일/시간</label>
+                              <label for="rental-date">대여일/시간 <span style="color: red;">*</span></label>
                               <div class="inline-fields">
                                 <!-- 연도/월/일 -->
-                                <div class = "form-group-fixed">2024년 12월 30일</div>
+                                <input type="date" class="small-input">
                                 <!-- 오전/오후 및 시간 -->
-                                <div class = "form-group-fixed">오전</div>
-                                <div class = "form-group-fixed">11:00</div>
+                                <select class="small-input">
+                                  <option>오전</option>
+                                  <option>오후</option>
+                                </select>
+                                <select class="small-input">
+                                  <option>00:00</option>
+                                  <option>01:00</option>
+                                  <option>02:00</option>
+                                  <option>03:00</option>
+                                  <option>04:00</option>
+                                  <option>05:00</option>
+                                  <option>06:00</option>
+                                  <option>07:00</option>
+                                  <option>08:00</option>
+                                  <option>09:00</option>
+                                  <option>10:00</option>
+                                  <option>11:00</option>
+                                  <option>12:00</option>
+                                </select>
                               </div>
                             </div>
                             <!-- 이메일 -->
                             <div class="form-group">
-                              <label for="email">이메일</label>
-                              <div class = "form-group-fixed">b_mule@naver.com</div>
+                              <label for="email">이메일 <span style="color: red;">*</span></label>
+                              <input type="email" id="email" placeholder="15자 이내로 입력해주세요." required>
                             </div>
                             <!-- 식장주소 -->
                             <div class="form-group-top">
-                              <label for="address" style="padding-top:10px">식장주소</label>
+                              <label for="address">식장주소 <span style="color: red;">*</span></label>
                                   <div class="form-group-detail">
                                       <div class="inline-fields">
                                       <!-- 우편번호 -->
-                                      <div class = "form-group-fixed">우편 번호</div>
+                                      <input type="text" class="small-input" placeholder="우편번호를 입력해주세요.">
+                                      <button type="button" class="address_btn">우편번호</button>
                                       </div>
                                       <!-- 주소 입력 -->
-                                      <div class = "form-group-fixed">인천광역시 연수구 먼우금로 126, 205동 502호</div>
+                                      <input type="text" placeholder="주소를 입력해주세요." style="margin-top: 10px; flex: 1;">
                                   </div>    
                             </div>
                             <!-- 요청사항 -->
                             <div class="form-group-top">
-                              <label for="requests"style="padding-top:10px">요청사항</label>
+                              <label for="requests">요청사항</label>
                               <textarea class ="requests" id="requests" placeholder="요청사항을 입력해주세요."></textarea>
                             </div>
                       
