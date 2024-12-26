@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가약 - Custom Wedding</title>
+    <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="scroll-container">
+        <!-- 배경 섹션 -->
+        <section id="background" class="book_page-section1">
+            <!-- 오른쪽 상단 메뉴 -->
+            <div class="menu">
+                <a href="product_list_page.html">상품</a>
+                <a href="book_page.html">예약</a>
+                <a href="#">상담</a>
+                <a href="#">검색</a>
+            </div>
+
+            <!-- 예약 확인서 제목 및 코드 섹션 -->
+            <div class="reservation-header">
+                <h1 class="reservation-main-title">예약 확인서</h1>
+                <div class="reservation-code">
+                    <label for="reservation-id">예약코드</label>
+                    <input type="text" id="reservation-id" placeholder="B-1227492">
+                </div>
+            </div>
+
+
+            <!-- 예약 확인서 섹션 -->
+            <div class="reservation-wrapper">
+                <div class="reservation-container">
+                    <!-- 주문 제품 정보 -->
+                    <div class="order-info">
+                        <h2>주문제품정보</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>제품 정보</th>
+                                    <th>할인 금액</th>
+                                    <th>결제 정보</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- 첫 번째 제품 -->
+                                <tr>
+                                    <td class="product-info-cell">
+                                        <img src="../image/info_example.png" alt="제품 이미지">
+                                        <div class="product-info-text">
+                                            <p>제품 이름</p>
+                                            <p>제품번호</p>
+                                            <p>수량: 1개</p>
+                                            <p>컬러: 화이트 / 레드</p>
+                                            <p>1,000,000원</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p class="discount-amount">500,000원</p>
+                                    </td>
+                                    <td>
+                                        <p class="payment-amount">500,000원</p>
+                                    </td>
+                                </tr>
+                                <tr class="option-row">
+                                    <td colspan="3">선택1: [제품명 / 1,000,000원] [수량: 1개] [컬러: 화이트 / 레드]</td>
+                                </tr>
+                    
+                                <!-- 두 번째 제품 -->
+                                <tr>
+                                    <td class="product-info-cell">
+                                        <img src="../image/info_example.png" alt="제품 이미지">
+                                        <div class="product-info-text">
+                                            <p>제품 이름</p>
+                                            <p>제품번호</p>
+                                            <p>수량: 1개</p>
+                                            <p>컬러: 우드 / 화이트</p>
+                                            <p>1,000,000원</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p class="discount-amount">500,000원</p>
+                                    </td>
+                                    <td>
+                                        <p class="payment-amount">500,000원</p>
+                                    </td>
+                                </tr>
+                                <tr class="option-row">
+                                    <td colspan="3">선택1: [제품명 / 1,000,000원] [수량: 1개] [컬러: 우드 / 화이트]</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2 style="padding-bottom: 10px; border-bottom: 2px solid #000000;">고객 정보</h2>
+                        
+                        <form class="form-container">
+                            <!-- 성함 -->
+                            <div class="form-group">
+                              <label for="name">성함 <span style="color: red;">*</span></label>
+                              <input type="text" id="name" placeholder="15자 이내로 입력해주세요." required>
+                            </div>
+                            <!-- 휴대전화 -->
+                            <div class="form-group">
+                              <label for="mobile">휴대전화 <span style="color: red;">*</span></label>
+                              <div class="inline-fields">
+                                <select class="small-input">
+                                  <option>010</option>
+                                  <option>011</option>
+                                  <option>016</option>
+                                </select>
+                                <input type="text" class="small-input" placeholder="123456789" required>
+                              </div>
+                            </div>
+                            <!-- 예비전화 -->
+                            <div class="form-group">
+                              <label for="backup-phone">예비전화</label>
+                              <div class="inline-fields">
+                                <select class="small-input">
+                                  <option>010</option>
+                                  <option>011</option>
+                                  <option>016</option>
+                                </select>
+                                <input type="text" class="small-input" placeholder="123456789">
+                              </div>
+                            </div>
+                            <!-- 대여일/시간 -->
+                            <div class="form-group">
+                              <label for="rental-date">대여일/시간 <span style="color: red;">*</span></label>
+                              <div class="inline-fields">
+                                <!-- 연도/월/일 -->
+                                <input type="date" class="small-input">
+                                <!-- 오전/오후 및 시간 -->
+                                <select class="small-input">
+                                  <option>오전</option>
+                                  <option>오후</option>
+                                </select>
+                                <select class="small-input">
+                                  <option>00:00</option>
+                                  <option>01:00</option>
+                                  <option>02:00</option>
+                                  <option>03:00</option>
+                                  <option>04:00</option>
+                                  <option>05:00</option>
+                                  <option>06:00</option>
+                                  <option>07:00</option>
+                                  <option>08:00</option>
+                                  <option>09:00</option>
+                                  <option>10:00</option>
+                                  <option>11:00</option>
+                                  <option>12:00</option>
+                                </select>
+                              </div>
+                            </div>
+                            <!-- 이메일 -->
+                            <div class="form-group">
+                              <label for="email">이메일 <span style="color: red;">*</span></label>
+                              <input type="email" id="email" placeholder="15자 이내로 입력해주세요." required>
+                            </div>
+                            <!-- 식장주소 -->
+                            <div class="form-group-top">
+                              <label for="address">식장주소 <span style="color: red;">*</span></label>
+                                  <div class="form-group-detail">
+                                      <div class="inline-fields">
+                                      <!-- 우편번호 -->
+                                      <input type="text" class="small-input" placeholder="우편번호를 입력해주세요.">
+                                      <button type="button" class="address_btn">우편번호</button>
+                                      </div>
+                                      <!-- 주소 입력 -->
+                                      <input type="text" placeholder="주소를 입력해주세요." style="margin-top: 10px; flex: 1;">
+                                  </div>    
+                            </div>
+                            <!-- 요청사항 -->
+                            <div class="form-group-top">
+                              <label for="requests">요청사항</label>
+                              <textarea class ="requests" id="requests" placeholder="요청사항을 입력해주세요."></textarea>
+                            </div>
+                      
+                          </form>
+
+                          <h2 style="padding-top: 10px; border-top: 2px solid #000000;">이용 약관 및 주의사항</h2>
+                          <div class="description-box">
+                            <BIG><B>&middot; </B></BIG> 취급 주의 : 위험 물질 사용 시 충격, 화재, 물 손상 등 외부 요인으로 손상을 발생시키지 않도록 주의해 주십시오.<br>
+                            <BIG><B>&middot; </B></BIG> 사용 전 확인 : 물품 사용 전 작동 상태와 구성품을 확인하고, 즉시 처리하도록 하십시오.<br>
+                            <BIG><B>&middot; </B></BIG> 반납 상태 유지 : 물품은 사용 후 보관 가능한 깨끗한 상태로 유지해 주시기 바랍니다.<br>
+                            <BIG><B>&middot; </B></BIG> 연체 주의 : 반납 기한을 초과할 경우 추가 요금이 발생하며, 사전에 연장 요청을 하지 않는 경우 계약을 맺을 수 있습니다.<br>
+                            <BIG><B>&middot; </B></BIG>사용 환경 제한 : 물품은 사용 환경에만 국한되며, 사용 목적을 제한하는 것입니다.<br>
+                            <BIG><B>&middot; </B></BIG>긴급 상황 : 상황 사용 중이거나 문제가 발생하면 즉각적인 관계 당사자에게 연락해 도움을 요청하십시오.<br>
+                            <BIG><B>&middot; </B></BIG>반납 절차 준수 : 반납 시 작업자와 함께 물품 상태를 확인하여 조류를 방지하십시오.<br>
+                            <BIG><B>&middot; </B></BIG>재대여 방지 : 관련 물품을 제3자에게 등록하거나 재대여하는 행위는 금지됩니다.<br>
+                         </div>
+                      
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
