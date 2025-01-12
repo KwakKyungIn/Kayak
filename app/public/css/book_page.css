@@ -1,0 +1,428 @@
+/* 기존 CSS 유지 */
+body {
+    width: 1200px;
+    margin: 0 auto; /* 화면 가운데 정렬 */
+    font-family: Arial, sans-serif;
+    background-color: rgb(242, 242, 242);
+    color: black;
+    position: relative;
+    height: 100vh; /* 슬라이드 높이에 맞게 유지 */
+    overflow: auto; /* 전체 페이지의 스크롤 제거 */
+    
+}
+/* 상단 메뉴 */
+.menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 0.8em;
+    display: flex; /* 메뉴 항목을 가로로 나열 */
+    gap: 1px; /* 메뉴 항목 간격 */
+    
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    margin: 0 20px;
+    transition: color 0.3s;
+}
+/* 메뉴 양쪽에 | 추가 */
+.menu::before {
+    content: "|";
+    margin-right: 10px;
+    color: white;
+}
+
+.menu::after {
+    content: "|";
+    margin-left: 10px;
+    color: white;
+}
+
+
+.menu a:hover {
+    color: rgb(255, 0, 0);
+}
+
+
+.scroll-container {
+    width: 95%;
+    height: 100%;
+    flex-direction: column; /* 섹션을 세로로 배치 */
+    /* display: flex; 의미 찾아보기*/
+    margin: auto; /* 기본 중앙 배치 */
+    justify-content: center;
+    /* align-items: center;의미 찾기 */
+    background-color: #ffffff;
+    overflow-y: auto; /* 수직 스크롤 활성화 */
+    overflow-x: hidden; /* 가로 스크롤 방지 */
+}
+
+  /* book_page 시작----------------------------------------------- */
+
+/* 배경 섹션 */
+.book_page-section1 {
+    background-image: url('/image/product_list/background/main_background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 370px;
+    position: relative;
+}
+/* 예약 확인서 상단 타이틀 섹션 */
+.reservation-header {
+    padding-top: 70px;
+    text-align: center;
+    margin-bottom: 30px; /* 아래 예약 정보와의 간격 */
+}
+
+.reservation-main-title {
+    font-size: 25px;
+    font-weight: lighter;
+    margin: 0;
+    color: white;
+    padding-bottom: 40px;
+}
+
+
+
+.reservation-code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.reservation-code label {
+    font-size: 16px;
+    color: white;
+    font-weight: lighter;
+}
+
+.reservation-code input {
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 15px !important; 
+    width: 150px;
+}
+
+/* 예약 확인서 전체 컨테이너 */
+.reservation-wrapper {
+    position: absolute;
+    top: 200px; /* 배경 이미지에서 아래로 띄우기 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%; /* 페이지 너비 */
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    
+    padding: 20px;
+}
+
+
+
+/* 주문 제품 정보 */
+.order-info {
+    margin: 20px 40px;
+    font-size: 10px;
+    font-weight: lighter;
+}
+.order-info h2{
+    font-weight: lighter;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    text-align: center; /* 모든 열 중앙 정렬 */
+    padding: 10px;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #ffffff;
+    font-weight: bold;
+    border-top: 2px solid #000; /* 헤더 구분선 두껍게 */
+    border-bottom: 1px solid #000; /* 헤더 구분선 두껍게 */
+}
+
+tr + tr {
+    border-top: 1px solid #ddd; /* 일반 행 구분선 */
+    border-bottom: 1px solid #ddd; /* 일반 행 구분선 */
+}
+
+.product-info-cell {
+    display: flex;
+    justify-content: start; /* 제품 정보는 왼쪽 정렬 유지 */
+    gap: 15px;
+}
+
+.product-info-cell img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.product-info-text {
+    text-align: left; /* 텍스트는 왼쪽 정렬 */
+    font-size: 10px;
+    font-weight: lighter;
+}
+
+.product-info-text p {
+    margin: 5px 0;
+}
+
+.discount-amount {
+    color: gray;
+    font-size: 12px;
+}
+
+.payment-amount {
+    font-weight: bold;
+    color: black;
+    font-size: 12px;
+}
+
+.option-row td{
+background-color: #f9f9f9;
+font-size: 10px;
+color: #afafaf;
+text-align: left; /* 왼쪽 정렬 추가 */
+padding-left: 10px; /* 추가적인 여백을 원할 경우 */
+
+}
+
+
+ 
+
+
+
+  
+
+  input[type="text"]{
+    padding: 10px;
+    font-size: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+
+
+/* 예약 확인서 부분 버튼 관련 css*/
+/* 추가 버튼 스타일 */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* 버튼 간 간격 */
+}
+
+.action-buttons button {
+    width: 60px; /* 버튼 너비 */
+    height: 25px; /* 버튼 높이 */
+    padding: 4px 3px; /* 여백 최소화 */
+    font-size: 8px; /* 글자 크기 축소 */
+    border: none;
+    cursor: pointer;
+}
+
+
+.action-buttons .btn-option {
+    background-color: #003333; /* 옵션변경 버튼 색상 */
+    color: white;
+}
+
+.action-buttons .btn-delete {
+    background-color: #FFFFFF; /* 삭제 버튼 색상 */
+    color: black;
+    border: 1px solid #000000;
+}
+
+.action-buttons .btn-delete:hover {
+    background-color: #FFDDDD; /* 삭제 버튼 hover 색상 */
+}
+.quantity-control {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 8px; /* 버튼 간격 */
+}
+
+.quantity-control button {
+display: flex; /* 플렉스 박스를 사용하여 정렬 */
+align-items: center; /* 세로 가운데 정렬 */
+justify-content: center;
+width: 14px;
+height: 14px;
+background-color: #f2f2f2; /* 회색 배경 */
+border: 1px solid #ccc; /* 테두리 색 */
+border-radius: 4px;
+font-size: 10px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.quantity-control button:hover {
+background-color: #e0e0e0; /* hover 시 밝은 회색 */
+}
+
+.quantity {
+font-size: 8px;
+font-weight: bold;
+width: 24px;
+text-align: center;
+}
+/*끝--------*/
+
+
+
+
+
+
+.order-summary {
+    display: flex; /* 가로 정렬 */
+    justify-content: space-between; /* 양쪽 정렬 */
+    align-items: flex-start; /* 텍스트 위쪽 정렬 */
+    margin-top: 20px; /* 상단 여백 */
+    padding: 10px 0; /* 패딩만 추가 */
+    border-top: 1.5px solid #555; /* 위쪽 구분선 */
+    border-bottom: 2px solid #555; /* 아래쪽 구분선 */
+}
+
+.order-summary-left {
+    flex: 1; /* 왼쪽 영역 너비 */
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+    font-size: 14px; /* 글자 크기 */
+    font-weight: bolder;
+    line-height: 1; /* 줄 간격 고정 */
+    padding-left: 10px;
+}
+
+.order-summary-left p {
+    margin: 0; /* 모든 여백 제거 */
+    padding: 0; /* 모든 패딩 제거 */
+    line-height: 2.5; /* 줄 간격 유지 */
+}
+
+.order-summary-right {
+    flex: 2; /* 오른쪽 영역 더 넓게 */
+    text-align: left; /* 전체 텍스트 왼쪽 정렬 */
+    font-size: 10px;
+    line-height: 3; /* 줄 간격 */
+}
+
+.order-detail {
+    display: flex; /* 가로 정렬 */
+    justify-content: space-between; /* 좌우 정렬 */
+}
+
+.order-detail .label {
+    text-align: left; /* 레이블 왼쪽 정렬 */
+    flex: 1;
+}
+
+.order-detail .value {
+    text-align: right; /* 값 오른쪽 정렬 */
+    flex: 1;
+}
+
+.order-detail .value2 {
+    text-align: left; /* 값 오른쪽 정렬 */
+    flex: 0.1;
+}
+
+.order-summary-right hr {
+    margin: 10px 0; /* 구분선 위아래 간격 */
+    border: 0;
+    border-top: 1px solid #ddd; /* 구분선 스타일 */
+}
+
+.order-detail.total {
+    margin-top: 10px;
+    font-weight: bold; /* 강조 */
+}
+
+/* tabs.css */
+.tab-header {
+display: flex;
+justify-content: center; /* 버튼들을 중앙정렬 */
+margin-bottom: 20px;
+border-bottom: 1px solid #000000;
+}
+
+.tab-button {
+background-color: transparent;
+border: 1px solid #dddddd; 
+padding: 7px 20px;
+font-size: 12px;
+cursor: pointer;
+border-bottom: 2px solid transparent;
+transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+color: gray; /* 비활성 탭 기본 텍스트 색상 */
+flex-grow: 1; /* 버튼이 가로로 길어지도록 설정 */
+text-align: center; /* 텍스트 중앙정렬 */
+font-weight: lighter;
+}
+
+.tab-button:hover {
+background-color: #f5f5f5; /* 호버 시 연한 배경색 */
+}
+
+.tab-button.active {
+background-color: black; /* 활성화된 탭의 배경색 */
+color: white; /* 활성화된 탭의 텍스트 색상 */
+border-bottom: 2px solid black; /* 활성화된 탭 하단 테두리 */
+font-weight: lighter;
+}
+
+.tab-content {
+display: flex;
+flex-direction: column;
+}
+
+.tab-pane {
+display: none;
+}
+
+.tab-pane.active {
+display: block;
+}
+
+.image-container {
+display: flex;
+justify-content: center; /* 수평 중앙 정렬 */
+align-items: center; /* 수직 중앙 정렬 */
+margin-top: 20px; /* 버튼과 이미지 간격 */
+}
+
+.center-image {
+max-width: 50%; /* 부모 컨테이너 너비의 50%로 설정 */
+height: auto; /* 비율을 유지하며 크기를 조정 */
+display: block; /* 이미지를 블록 요소로 변경 */
+margin: 0 auto; /* 이미지가 중앙에 위치하도록 설정 */
+}
+.next-btn {
+background-color: #192c23; /* 버튼 배경색 */
+color: white; /* 버튼 텍스트 색상 */
+border: none; /* 테두리 제거 */
+border-radius: 30px; /* 버튼의 모서리를 둥글게 */
+padding: 7px 15px; /* 버튼의 내부 여백 */
+font-size: 12px; /* 텍스트 크기 */
+cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+transition: background-color 0.3s; /* 배경색 전환 효과 */
+text-decoration: none;
+}
+
+/* 마우스 오버 효과 */
+.next-btn:hover {
+background-color: #145b43; /* 오버 시 배경색 변경 */
+}
