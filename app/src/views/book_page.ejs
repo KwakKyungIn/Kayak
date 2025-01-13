@@ -29,261 +29,296 @@
                 </div>
             </div>
 
-            <!-- 예약 확인서 섹션 -->
-            <div class="reservation-wrapper">
-                <!-- 탭 영역 -->
+            <!-- 예약 확인서 섹션 -->  
+        </section>
+        <div class="reservation-wrapper">
+            <!-- 탭 영역 -->
+            <div id="cart-linked" class="tab-pane active">
                 <div class="order-info">
-                  <div class="image-container">
-                      <img src="/image/장바구니.png" alt="상품 이미지" class="center-image">
-                  </div>
-              </div>
+                    <div class="image-container">
+                        <img src="/image/장바구니.png" alt="상품 이미지" class="center-image">
+                    </div>
+                </div>
+            </div>
+
+            <div id="drawer-linked" class="tab-pane">
                 <div class="order-info">
-                <div class="tab-header">
-                    <button class="tab-button active" data-tab="cart">장바구니</button>
-                    <button class="tab-button" data-tab="drawer">서랍</button>
+                    <div class="image-container">
+                        <img src="/image/서랍.png" alt="상품 이미지" class="center-image2">
+                    </div>
                 </div>
-                </div>
-                <div class="tab-content">
-                    <!-- 장바구니 콘텐츠 -->
-                    <div id="cart" class="tab-pane active">
-                        <div class="reservation-container">
-                            <!-- 주문 제품 정보 -->
-                            <div class="order-info">
-                                <h2>주문제품정보</h2>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>제품 정보</th>
-                                            <th>할인 금액</th>
-                                            <th>결제 정보</th>
-                                            <th>선택</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <!-- 첫 번째 제품 -->
-                                        <tr>
-                                            <td class="product-info-cell">
-                                                <img src="/image/info_example.png" alt="제품 이미지">
-                                                <div class="product-info-text">
-                                                    <p>제품 이름</p>
-                                                    <p>제품번호</p>
-                                                    <p>수량: 1개</p>
-                                                    <p>컬러: 화이트 / 레드</p>
-                                                    <p>1,000,000원</p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <p class="discount-amount">500,000원</p>
-                                            </td>
-                                            <td>
-                                                <p class="payment-amount">500,000원</p>
-                                            </td>
-                                            <td>
-                                                <div class="action-buttons">
-                                                    <button class="btn-option">옵션변경</button>
-                                                    <button class="btn-delete">삭제</button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr class="option-row">
-                                            <td colspan="3">선택1: [제품명 / 1,000,000원] [수량: 1개] [컬러: 화이트 / 레드]</td>
-                                            <td class="quantity-control-cell">
-                                                <div class="quantity-control">
-                                                    <button class="decrease">-</button>
-                                                    <span class="quantity">1</span>
-                                                    <button class="increase">+</button>
-                                                </div>
-                                            </td>
-                                        </tr>
+            </div>
 
-                                        <!-- 두 번째 제품 -->
-                                        <tr>
-                                            <td class="product-info-cell">
-                                                <img src="/image/info_example.png" alt="제품 이미지">
-                                                <div class="product-info-text">
-                                                    <p>제품 이름</p>
-                                                    <p>제품번호</p>
-                                                    <p>수량: 1개</p>
-                                                    <p>컬러: 우드 / 화이트</p>
-                                                    <p>1,000,000원</p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <p class="discount-amount">500,000원</p>
-                                            </td>
-                                            <td>
-                                                <p class="payment-amount">500,000원</p>
-                                            </td>
-                                            <td>
-                                                <div class="action-buttons">
-                                                    <button class="btn-option">옵션변경</button>
-                                                    <button class="btn-delete">삭제</button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr class="option-row">
-                                            <td colspan="3">선택1: [제품명 / 1,000,000원] [수량: 1개] [컬러: 화이트 / 레드]</td>
-                                            <td class="quantity-control-cell">
-                                                <div class="quantity-control">
-                                                    <button class="decrease">-</button>
-                                                    <span class="quantity">1</span>
-                                                    <button class="increase">+</button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+            
+            <div class="order-info">
+            <div class="tab-header">
+                <button class="tab-button active" data-tab="cart">장바구니</button>
+                <button class="tab-button" data-tab="drawer">서랍</button>
+            </div>
+            </div>
+            <div class="tab-content">
+                <!-- 장바구니 콘텐츠 -->
+                <div id="cart" class="tab-pane active">
+                    <div class="reservation-container">
+                        <!-- 주문 제품 정보 -->
+                        <div class="order-info">
+                            <h2>주문제품정보</h2>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>제품 정보</th>
+                                        <th>할인 금액</th>
+                                        <th>결제 정보</th>
+                                        <th>선택</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- 첫 번째 제품 -->
+                                    <tr>
+                                        <td class="product-info-cell">
+                                            <img src="/image/info_example.png" alt="제품 이미지">
+                                            <div class="product-info-text">
+                                                <p>제품 이름</p>
+                                                <p>제품번호</p>
+                                                <p>수량: 1개</p>
+                                                <p>컬러: 화이트 / 레드</p>
+                                                <p>1,000,000원</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="discount-amount">500,000원</p>
+                                        </td>
+                                        <td>
+                                            <p class="payment-amount">500,000원</p>
+                                        </td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn-option">옵션변경</button>
+                                                <button class="btn-delete">삭제</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="option-row">
+                                        <td colspan="3">선택1: [제품명 / 1,000,000원] [수량: 1개] [컬러: 화이트 / 레드]</td>
+                                        <td class="quantity-control-cell">
+                                            <div class="quantity-control">
+                                                <button class="decrease">-</button>
+                                                <span class="quantity">1</span>
+                                                <button class="increase">+</button>
+                                            </div>
+                                        </td>
+                                    </tr>
 
-                                <!-- 총 주문 금액 섹션 -->
-                                <div class="order-summary">
-                                    <!-- 왼쪽: 총 주문금액 텍스트 -->
-                                    <div class="order-summary-left">
-                                        <p>총 주문금액</p>
+                                    <!-- 두 번째 제품 -->
+                                    <tr>
+                                        <td class="product-info-cell">
+                                            <img src="/image/info_example.png" alt="제품 이미지">
+                                            <div class="product-info-text">
+                                                <p>제품 이름</p>
+                                                <p>제품번호</p>
+                                                <p>수량: 1개</p>
+                                                <p>컬러: 우드 / 화이트</p>
+                                                <p>1,000,000원</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="discount-amount">500,000원</p>
+                                        </td>
+                                        <td>
+                                            <p class="payment-amount">500,000원</p>
+                                        </td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn-option">옵션변경</button>
+                                                <button class="btn-delete">삭제</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="option-row">
+                                        <td colspan="3">선택1: [제품명 / 1,000,000원] [수량: 1개] [컬러: 화이트 / 레드]</td>
+                                        <td class="quantity-control-cell">
+                                            <div class="quantity-control">
+                                                <button class="decrease">-</button>
+                                                <span class="quantity">1</span>
+                                                <button class="increase">+</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- 총 주문 금액 섹션 -->
+                            <div class="order-summary">
+                                <!-- 왼쪽: 총 주문금액 텍스트 -->
+                                <div class="order-summary-left">
+                                    <p>총 주문금액</p>
+                                </div>
+
+                                <!-- 오른쪽: 주문 상품 수, 주문 금액, 할인 금액, 최종 결제 금액 -->
+                                <div class="order-summary-right">
+                                    <div class="order-detail">
+                                        <span class="label">주문 상품 수</span>
+                                        <span class="value">2</span>
+                                        <span class="value2">개</span>
                                     </div>
-
-                                    <!-- 오른쪽: 주문 상품 수, 주문 금액, 할인 금액, 최종 결제 금액 -->
-                                    <div class="order-summary-right">
-                                        <div class="order-detail">
-                                            <span class="label">주문 상품 수</span>
-                                            <span class="value">2</span>
-                                            <span class="value2">개</span>
-                                        </div>
-                                        <div class="order-detail">
-                                            <span class="label">주문 금액</span>
-                                            <span class="value">2,000,000</span>
-                                            <span class="value2">원</span>
-                                        </div>
-                                        <div class="order-detail">
-                                            <span class="label">할인 금액</span>
-                                            <span class="value">1,000,000</span>
-                                            <span class="value2">원</span>
-                                        </div>
-                                        <hr> <!-- 구분선 -->
-                                        <div class="order-detail total">
-                                            <span class="label"><strong>최종 결제 금액</strong></span>
-                                            <span class="value" style="color: red;"><strong>1,000,000</strong></span>
-                                            <span class="value2"><strong>원</strong></span>
-                                        </div>
+                                    <div class="order-detail">
+                                        <span class="label">주문 금액</span>
+                                        <span class="value">2,000,000</span>
+                                        <span class="value2">원</span>
+                                    </div>
+                                    <div class="order-detail">
+                                        <span class="label">할인 금액</span>
+                                        <span class="value">1,000,000</span>
+                                        <span class="value2">원</span>
+                                    </div>
+                                    <hr> <!-- 구분선 -->
+                                    <div class="order-detail total">
+                                        <span class="label"><strong>최종 결제 금액</strong></span>
+                                        <span class="value" style="color: red;"><strong>1,000,000</strong></span>
+                                        <span class="value2"><strong>원</strong></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
+                    <div style="display: flex; justify-content: center; margin-top: 20px;">
+                        <a class="next-btn" href="counsel_book">
+                            다음으로 넘어가기
+                        </a>
+                        </div>
                     
                 </div>
+                
+            </div>
+            
 
-            <!--두번째 페이지 여기가 서랍임-->
-                <div class="tab-content">
-                  <!-- 장바구니 콘텐츠 -->
-                  <div id="drawer" class="tab-pane">
-                      <div class="reservation-container">
-                          <!-- 주문 제품 정보 -->
-                          <div class="order-info">
-                              <h2>주문제품정보</h2>
-                              <table>
-                                  <thead>
-                                      <tr>
-                                          <th>제품 정보</th>
-                                          <th>할인 금액</th>
-                                          <th>결제 정보</th>
-                                          <th>선택</th>
-                                      </tr>
-                                  </thead>
-                                  <tbody>
-                                      <!-- 첫 번째 제품 -->
-                                      <tr>
-                                          <td class="product-info-cell">
-                                              <img src="/image/info_example.png" alt="제품 이미지">
-                                              <div class="product-info-text">
-                                                  <p>제품 이름</p>
-                                                  <p>제품번호</p>
-                                                  <p>수량: 1개</p>
-                                                  <p>컬러: 화이트 / 레드</p>
-                                                  <p>1,000,000원</p>
-                                              </div>
-                                          </td>
-                                          <td>
-                                              <p class="discount-amount">500,000원</p>
-                                          </td>
-                                          <td>
-                                              <p class="payment-amount">500,000원</p>
-                                          </td>
-                                          <td>
-                                              <div class="action-buttons">
-                                                  <button class="btn-option">옵션변경</button>
-                                                  <button class="btn-delete">삭제</button>
-                                              </div>
-                                          </td>
-                                      </tr>
-                                      <tr class="option-row">
-                                          <td colspan="3">선택1: [제품명 / 1,000,000원] [수량: 1개] [컬러: 화이트 / 레드]</td>
-                                          <td class="quantity-control-cell">
-                                              <div class="quantity-control">
-                                                  <button class="decrease">-</button>
-                                                  <span class="quantity">1</span>
-                                                  <button class="increase">+</button>
-                                              </div>
-                                          </td>
-                                      </tr>
+        <!--두번째 페이지 여기가 서랍임-->
+            <div class="tab-content">
+              <!-- 장바구니 콘텐츠 -->
+              <div id="drawer" class="tab-pane">
+                  <div class="reservation-container">
+                      <!-- 주문 제품 정보 -->
+                      <div class="order-info">
+                          <h2>서랍</h2>
+                          <table>
+                              <thead>
+                                  <tr>
+                                      <th>제품 정보</th>
+                                      <th>할인 금액</th>
+                                      <th>결제 정보</th>
+                                      <th>선택</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <!-- 첫 번째 제품 -->
+                                  <tr>
+                                      <td class="product-info-cell">
+                                          <img src="/image/info_example.png" alt="제품 이미지">
+                                          <div class="product-info-text">
+                                              <p>제품 이름</p>
+                                              <p>제품번호</p>
+                                              <p>수량: 1개</p>
+                                              <p>컬러: 화이트 / 레드</p>
+                                              <p>1,000,000원</p>
+                                          </div>
+                                      </td>
+                                      <td>
+                                          <p class="discount-amount">500,000원</p>
+                                      </td>
+                                      <td>
+                                          <p class="payment-amount">500,000원</p>
+                                      </td>
+                                      <td>
+                                          <div class="action-buttons">
+                                              <button class="btn-option">옵션변경</button>
+                                              <button class="btn-delete">삭제</button>
+                                          </div>
+                                      </td>
+                                  </tr>
+                                  <tr class="option-row">
+                                      <td colspan="3">선택1: [제품명 / 1,000,000원] [수량: 1개] [컬러: 화이트 / 레드]</td>
+                                      <td class="quantity-control-cell">
+                                          <div class="quantity-control">
+                                              <button class="decrease">-</button>
+                                              <span class="quantity">1</span>
+                                              <button class="increase">+</button>
+                                          </div>
+                                      </td>
+                                  </tr>
 
-                                      <!-- 두 번째 제품 -->
-                                      <tr>
-                                          <td class="product-info-cell">
-                                              <img src="/image/info_example.png" alt="제품 이미지">
-                                              <div class="product-info-text">
-                                                  <p>제품 이름</p>
-                                                  <p>제품번호</p>
-                                                  <p>수량: 1개</p>
-                                                  <p>컬러: 우드 / 화이트</p>
-                                                  <p>1,000,000원</p>
-                                              </div>
-                                          </td>
-                                          <td>
-                                              <p class="discount-amount">500,000원</p>
-                                          </td>
-                                          <td>
-                                              <p class="payment-amount">500,000원</p>
-                                          </td>
-                                          <td>
-                                              <div class="action-buttons">
-                                                  <button class="btn-option">옵션변경</button>
-                                                  <button class="btn-delete">삭제</button>
-                                              </div>
-                                          </td>
-                                      </tr>
-                                      <tr class="option-row">
-                                          <td colspan="3">선택1: [제품명 / 1,000,000원] [수량: 1개] [컬러: 화이트 / 레드]</td>
-                                          <td class="quantity-control-cell">
-                                              <div class="quantity-control">
-                                                  <button class="decrease">-</button>
-                                                  <span class="quantity">1</span>
-                                                  <button class="increase">+</button>
-                                              </div>
-                                          </td>
-                                      </tr>
-                                  </tbody>
-                              </table>
+                                  <!-- 두 번째 제품 -->
+                                  <tr>
+                                      <td class="product-info-cell">
+                                          <img src="/image/info_example.png" alt="제품 이미지">
+                                          <div class="product-info-text">
+                                              <p>제품 이름</p>
+                                              <p>제품번호</p>
+                                              <p>수량: 1개</p>
+                                              <p>컬러: 우드 / 화이트</p>
+                                              <p>1,000,000원</p>
+                                          </div>
+                                      </td>
+                                      <td>
+                                          <p class="discount-amount">500,000원</p>
+                                      </td>
+                                      <td>
+                                          <p class="payment-amount">500,000원</p>
+                                      </td>
+                                      <td>
+                                          <div class="action-buttons">
+                                              <button class="btn-option">옵션변경</button>
+                                              <button class="btn-delete">삭제</button>
+                                          </div>
+                                      </td>
+                                  </tr>
+                                  <tr class="option-row">
+                                      <td colspan="3">선택1: [제품명 / 1,000,000원] [수량: 1개] [컬러: 화이트 / 레드]</td>
+                                      <td class="quantity-control-cell">
+                                          <div class="quantity-control">
+                                              <button class="decrease">-</button>
+                                              <span class="quantity">1</span>
+                                              <button class="increase">+</button>
+                                          </div>
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                          <div class="cart-button-container">
+                            <a href="#" class="cart-button">
+                                <span class="item-count">장바구니 추가하기</span>
+                                <span class="arrow">></span>
+                            </a>
+                        </div>
+                        
+                        
 
-                          </div>
                       </div>
-                      
                   </div>
                   
               </div>
-              <div style="display: flex; justify-content: center; margin-top: 20px;">
-                <a class="next-btn" href="counsel_book">
-                    다음으로 넘어가기
-                </a>
-            </div>
+              
+          </div>
+          
 
+
+        </div>
+           
+        <footer class="footer">
+            <div class="footer-content">
+                <p>© 2025 My Website. All rights reserved.</p>
+                <p>Contact: support@mywebsite.com</p>
             </div>
-        </section>
+        </footer>
+        
     </div>
+    
+
 </body>
+
+
 <script>
   // tabs.js
-document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
     const tabButtons = document.querySelectorAll(".tab-button");
     const tabPanes = document.querySelectorAll(".tab-pane");
 
@@ -296,10 +331,28 @@ document.addEventListener("DOMContentLoaded", function () {
             // 클릭된 버튼과 연결된 탭 활성화
             button.classList.add("active");
             const tabId = button.getAttribute("data-tab");
-            document.getElementById(tabId).classList.add("active");
+            const activeTab = document.getElementById(tabId);
+            activeTab.classList.add("active");
+
+            // 추가된 연동 탭 활성화/비활성화 처리
+            if (tabId === "cart") {
+                const linkedCartTab = document.getElementById("cart-linked");
+                if (linkedCartTab) {
+                    linkedCartTab.classList.add("active");
+                }
+            }
+
+            if (tabId === "drawer") {
+                const linkedDrawerTab = document.getElementById("drawer-linked");
+                if (linkedDrawerTab) {
+                    linkedDrawerTab.classList.add("active");
+                }
+            }
         });
     });
 });
+
+
 
 </script>
 </html>

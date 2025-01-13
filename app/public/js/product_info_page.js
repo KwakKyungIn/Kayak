@@ -129,3 +129,21 @@ document.addEventListener("DOMContentLoaded", function () {
         slider.style.transform = `translateX(-${(currentIndex + 1) * images[0].clientWidth}px)`;
     });
 });
+
+
+//여기서 부터 제품 크기 코드
+// 모든 토글 버튼에 클릭 이벤트 추가
+document.querySelectorAll('.toggle-button').forEach(button => {
+    button.addEventListener('click', () => {
+        const content = button.parentElement.nextElementSibling;
+
+        // 상세 정보 표시/숨기기
+        if (content.style.display === 'block') {
+            content.style.display = 'none';
+            button.textContent = '+'; // 버튼 텍스트를 '+'로 변경
+        } else {
+            content.style.display = 'block';
+            button.textContent = '-'; // 버튼 텍스트를 '-'로 변경
+        }
+    });
+});

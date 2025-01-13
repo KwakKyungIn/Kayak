@@ -75,7 +75,7 @@ position: relative;
 .tab-menu {
     display: flex;
     gap: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     font-size: 0.8em;
 }
 
@@ -131,6 +131,57 @@ position: relative;
     font-size: 14px;
     color: #333;
   }
-  /* book_page 시작----------------------------------------------- */
+  /* 탭메뉴 css 추가----------------------------------------------- */
 
 
+/* 기본 탭 메뉴 스타일 */
+
+  
+  .tab-item {
+    position: relative; /* 드롭다운 위치 조정을 위해 필요 */
+  }
+  
+  .tab-item a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+  }
+  
+  /* 드롭다운 메뉴 숨김 기본 설정 */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* 탭 아래에 표시 */
+    left: 0;
+    background-color: transparent;
+    border: 0px solid #ddd;
+    padding-top: 7px;
+    white-space: nowrap; /* 줄바꿈 방지 */
+    
+  }
+  
+  .dropdown-menu a {
+    display: inline-block;
+    margin: 0 0px;
+    text-decoration: none;
+    color: #adadad;
+  }
+  
+  .dropdown-menu a:hover {
+    color: #e74c3c; /* 하이라이트 효과 */
+  }
+  
+  /* 호버 시 드롭다운 메뉴 표시 */
+  .tab-item:hover .dropdown-menu {
+    display: flex; /* 가로로 정렬 */
+  }
+  .dropdown-menu a::before {
+    content: "‣";
+    margin-right: 7px;
+    color: #adadad;
+
+}
+.tab-item:hover > a,
+.tab-item .dropdown-menu:hover ~ a {
+  color: #e74c3c;/* 유지할 색상 */
+}
