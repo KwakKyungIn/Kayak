@@ -15,8 +15,8 @@
             <div class="menu">
                 <a href="product_list_page">상품</a>
                 <a href="book_page">예약</a>
-                <a href="#">상담</a>
-                <a href="book_done">검색</a>
+                <a href="inquiry">문의</a>
+                <a href="#">확인</a>
             </div>
 
             <!-- 예약 확인서 제목 및 코드 섹션 -->
@@ -27,149 +27,194 @@
                     <input type="text" id="reservation-id" placeholder="B-1227492">
                 </div>
             </div>
-
-
-            <!-- 예약 확인서 섹션 -->
-            <div class="reservation-wrapper">
-                <div class="reservation-container">
-                    <!-- 주문 제품 정보 -->
-                    <div class="order-info">
-                        <div class="image-container1">
-                            <img src="/image/book_done.png" alt="상품 이미지" class="center-image1">
-                        </div>
-                        <h2>주문제품정보</h2>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>제품 정보</th>
-                                    <th>할인 금액</th>
-                                    <th>결제 정보</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- 첫 번째 제품 -->
-                                <tr>
-                                    <td class="product-info-cell">
-                                        <img src="/image/info_example.png" alt="제품 이미지">
-                                        <div class="product-info-text">
-                                            <p>제품 이름</p>
-                                            <p>제품번호</p>
-                                            <p>수량: 1개</p>
-                                            <p>컬러: 화이트 / 레드</p>
-                                            <p>1,000,000원</p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <p class="discount-amount">500,000원</p>
-                                    </td>
-                                    <td>
-                                        <p class="payment-amount">500,000원</p>
-                                    </td>
-                                </tr>
-                                <tr class="option-row">
-                                    <td colspan="3">선택1: [제품명 / 1,000,000원] [수량: 1개] [컬러: 화이트 / 레드]</td>
-                                </tr>
-                    
-                                <!-- 두 번째 제품 -->
-                                <tr>
-                                    <td class="product-info-cell">
-                                        <img src="/image/info_example.png" alt="제품 이미지">
-                                        <div class="product-info-text">
-                                            <p>제품 이름</p>
-                                            <p>제품번호</p>
-                                            <p>수량: 1개</p>
-                                            <p>컬러: 우드 / 화이트</p>
-                                            <p>1,000,000원</p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <p class="discount-amount">500,000원</p>
-                                    </td>
-                                    <td>
-                                        <p class="payment-amount">500,000원</p>
-                                    </td>
-                                </tr>
-                                <tr class="option-row">
-                                    <td colspan="3">선택1: [제품명 / 1,000,000원] [수량: 1개] [컬러: 우드 / 화이트]</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <h2 style="padding-bottom: 10px; border-bottom: 2px solid #000000;">고객 정보</h2>
-                        
-                        <form class="form-container">
-                            <!-- 성함 -->
-                            <div class="form-group">
-                              <label for="name">성함</label>
-                              <div class = "form-group-fixed">곽경인</div>
-                            </div>
-                            <!-- 휴대전화 -->
-                            <div class="form-group">
-                              <label for="mobile">휴대전화</label>
-                              <div class="inline-fields">
-                                <div class = "form-group-fixed">010 - 7496 - 6307</div>
-                              </div>
-                            </div>
-                            <!-- 예비전화 -->
-                            <div class="form-group">
-                              <label for="backup-phone">예비전화</label>
-                              <div class="inline-fields">
-                                <div class = "form-group-fixed">010 - 7496 - 6307</div>
-                              </div>
-                            </div>
-                            <!-- 대여일/시간 -->
-                            <div class="form-group">
-                              <label for="rental-date">대여일/시간</label>
-                              <div class="inline-fields">
-                                <!-- 연도/월/일 -->
-                                <div class = "form-group-fixed">2024년 12월 30일</div>
-                                <!-- 오전/오후 및 시간 -->
-                                <div class = "form-group-fixed">오전</div>
-                                <div class = "form-group-fixed">11:00</div>
-                              </div>
-                            </div>
-                            <!-- 이메일 -->
-                            <div class="form-group">
-                              <label for="email">이메일</label>
-                              <div class = "form-group-fixed">b_mule@naver.com</div>
-                            </div>
-                            <!-- 식장주소 -->
-                            <div class="form-group-top">
-                              <label for="address" style="padding-top:10px">식장주소</label>
-                                  <div class="form-group-detail">
-                                      <div class="inline-fields">
-                                      <!-- 우편번호 -->
-                                      <div class = "form-group-fixed">우편 번호</div>
-                                      </div>
-                                      <!-- 주소 입력 -->
-                                      <div class = "form-group-fixed">인천광역시 연수구 먼우금로 126, 205동 502호</div>
-                                  </div>    
-                            </div>
-                            <!-- 요청사항 -->
-                            <div class="form-group-top">
-                              <label for="requests"style="padding-top:10px">요청사항</label>
-                              <textarea class ="requests" id="requests" placeholder="요청사항을 입력해주세요."></textarea>
-                            </div>
-                      
-                          </form>
-
-                          <h2 style="padding-top: 10px; border-top: 2px solid #000000;">이용 약관 및 주의사항</h2>
-                          <div class="description-box">
-                            <BIG><B>&middot; </B></BIG> 취급 주의 : 위험 물질 사용 시 충격, 화재, 물 손상 등 외부 요인으로 손상을 발생시키지 않도록 주의해 주십시오.<br>
-                            <BIG><B>&middot; </B></BIG> 사용 전 확인 : 물품 사용 전 작동 상태와 구성품을 확인하고, 즉시 처리하도록 하십시오.<br>
-                            <BIG><B>&middot; </B></BIG> 반납 상태 유지 : 물품은 사용 후 보관 가능한 깨끗한 상태로 유지해 주시기 바랍니다.<br>
-                            <BIG><B>&middot; </B></BIG> 연체 주의 : 반납 기한을 초과할 경우 추가 요금이 발생하며, 사전에 연장 요청을 하지 않는 경우 계약을 맺을 수 있습니다.<br>
-                            <BIG><B>&middot; </B></BIG>사용 환경 제한 : 물품은 사용 환경에만 국한되며, 사용 목적을 제한하는 것입니다.<br>
-                            <BIG><B>&middot; </B></BIG>긴급 상황 : 상황 사용 중이거나 문제가 발생하면 즉각적인 관계 당사자에게 연락해 도움을 요청하십시오.<br>
-                            <BIG><B>&middot; </B></BIG>반납 절차 준수 : 반납 시 작업자와 함께 물품 상태를 확인하여 조류를 방지하십시오.<br>
-                            <BIG><B>&middot; </B></BIG>재대여 방지 : 관련 물품을 제3자에게 등록하거나 재대여하는 행위는 금지됩니다.<br>
-                         </div>
-                      
-                    </div>
-                   
-                </div>
-            </div>
         </section>
+                    <!-- 예약 확인서 섹션 -->
+                    <div class="reservation-wrapper">
+                        <div class="reservation-container">
+                            <!-- 주문 제품 정보 -->
+                            <div class="order-info">
+                                <div class="image-container1">
+                                    <img src="/image/book_done.png" alt="상품 이미지" class="center-image1">
+                                </div>
+                                <h2>주문제품정보</h2>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>제품 정보</th>
+                                            <th>할인 금액</th>
+                                            <th>결제 정보</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- 첫 번째 제품 -->
+                                        <tr>
+                                            <td class="product-info-cell">
+                                                <img src="/image/info_example.png" alt="제품 이미지">
+                                                <div class="product-info-text">
+                                                    <p>제품 이름</p>
+                                                    <p>제품번호</p>
+                                                    <p>수량: 1개</p>
+                                                    <p>컬러: 화이트 / 레드</p>
+                                                    <p>1,000,000원</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p class="discount-amount">500,000원</p>
+                                            </td>
+                                            <td>
+                                                <p class="payment-amount">500,000원</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="option-row">
+                                            <td colspan="3">선택1: [제품명 / 1,000,000원] [수량: 1개] [컬러: 화이트 / 레드]</td>
+                                        </tr>
+                            
+                                        <!-- 두 번째 제품 -->
+                                        <tr>
+                                            <td class="product-info-cell">
+                                                <img src="/image/info_example.png" alt="제품 이미지">
+                                                <div class="product-info-text">
+                                                    <p>제품 이름</p>
+                                                    <p>제품번호</p>
+                                                    <p>수량: 1개</p>
+                                                    <p>컬러: 우드 / 화이트</p>
+                                                    <p>1,000,000원</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p class="discount-amount">500,000원</p>
+                                            </td>
+                                            <td>
+                                                <p class="payment-amount">500,000원</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="option-row">
+                                            <td colspan="3">선택1: [제품명 / 1,000,000원] [수량: 1개] [컬러: 우드 / 화이트]</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+        
+                                <h2 style="padding-bottom: 10px; border-bottom: 2px solid #000000;">고객 정보</h2>
+                                
+                                <form class="form-container">
+                                    <!-- 성함 -->
+                                    <div class="form-group">
+                                      <label for="name">성함</label>
+                                      <div class = "form-group-fixed">곽경인</div>
+                                    </div>
+                                    <!-- 휴대전화 -->
+                                    <div class="form-group">
+                                      <label for="mobile">휴대전화</label>
+                                      <div class="inline-fields">
+                                        <div class = "form-group-fixed">010 - 7496 - 6307</div>
+                                      </div>
+                                    </div>
+                                    <!-- 예비전화 -->
+                                    <div class="form-group">
+                                      <label for="backup-phone">예비전화</label>
+                                      <div class="inline-fields">
+                                        <div class = "form-group-fixed">010 - 7496 - 6307</div>
+                                      </div>
+                                    </div>
+                                    <!-- 대여일/시간 -->
+                                    <div class="form-group">
+                                      <label for="rental-date">대여일/시간</label>
+                                      <div class="inline-fields">
+                                        <!-- 연도/월/일 -->
+                                        <div class = "form-group-fixed">2024년 12월 30일</div>
+                                        <!-- 오전/오후 및 시간 -->
+                                        <div class = "form-group-fixed">오전</div>
+                                        <div class = "form-group-fixed">11:00</div>
+                                      </div>
+                                    </div>
+                                    <!-- 이메일 -->
+                                    <div class="form-group">
+                                      <label for="email">이메일</label>
+                                      <div class = "form-group-fixed">b_mule@naver.com</div>
+                                    </div>
+                                    <!-- 식장주소 -->
+                                    <div class="form-group-top">
+                                      <label for="address" style="padding-top:10px">식장주소</label>
+                                          <div class="form-group-detail">
+                                              <div class="inline-fields">
+                                              <!-- 우편번호 -->
+                                              <div class = "form-group-fixed">우편 번호</div>
+                                              </div>
+                                              <!-- 주소 입력 -->
+                                              <div class = "form-group-fixed">인천광역시 연수구 먼우금로 126, 205동 502호</div>
+                                          </div>    
+                                    </div>
+                                    <!-- 요청사항 -->
+                                    <div class="form-group-top">
+                                      <label for="requests"style="padding-top:10px">요청사항</label>
+                                      <textarea class ="requests" id="requests" placeholder="요청사항을 입력해주세요."></textarea>
+                                    </div>
+                              
+                                  </form>
+        
+                                  <h2 style="padding-top: 10px; border-top: 2px solid #000000;">이용 약관 및 주의사항</h2>
+                                  <div class="description-box">
+                                    <BIG><B>&middot; </B></BIG> 취급 주의 : 위험 물질 사용 시 충격, 화재, 물 손상 등 외부 요인으로 손상을 발생시키지 않도록 주의해 주십시오.<br>
+                                    <BIG><B>&middot; </B></BIG> 사용 전 확인 : 물품 사용 전 작동 상태와 구성품을 확인하고, 즉시 처리하도록 하십시오.<br>
+                                    <BIG><B>&middot; </B></BIG> 반납 상태 유지 : 물품은 사용 후 보관 가능한 깨끗한 상태로 유지해 주시기 바랍니다.<br>
+                                    <BIG><B>&middot; </B></BIG> 연체 주의 : 반납 기한을 초과할 경우 추가 요금이 발생하며, 사전에 연장 요청을 하지 않는 경우 계약을 맺을 수 있습니다.<br>
+                                    <BIG><B>&middot; </B></BIG>사용 환경 제한 : 물품은 사용 환경에만 국한되며, 사용 목적을 제한하는 것입니다.<br>
+                                    <BIG><B>&middot; </B></BIG>긴급 상황 : 상황 사용 중이거나 문제가 발생하면 즉각적인 관계 당사자에게 연락해 도움을 요청하십시오.<br>
+                                    <BIG><B>&middot; </B></BIG>반납 절차 준수 : 반납 시 작업자와 함께 물품 상태를 확인하여 조류를 방지하십시오.<br>
+                                    <BIG><B>&middot; </B></BIG>재대여 방지 : 관련 물품을 제3자에게 등록하거나 재대여하는 행위는 금지됩니다.<br>
+                                 </div>
+                              
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <footer class="footer">
+                        <div class="footer-big-container">
+                          <div class="footer-container">
+                            <div class="footer-info">
+                              <div class="footer-logo">
+                                <img src="/image/logo.png" alt="회사 로고" />
+                              </div>
+                              <div class="footer-company">
+                                <h4>회사</h4>
+                                <p>사업자 주소 | 인천부평구 부개동 55-555</p>
+                                <p>사업자 등록 번호 | 00000-0000-0000-0000</p>
+                                <p>대표 전화번호 | (010) 9931 1981</p>
+                              </div>
+                              <div class="footer-service">
+                                <h4>고객 서비스</h4>
+                                <p><a href="/faq">자주 묻는 질문(FAQ)</a></p>
+                                <p><a href="/support">고객 지원/고객 문의</a></p>
+                                <p><a href="/returns">반품 및 환불 정책</a></p>
+                                <p><a href="/contact">영업팀과 문의</a></p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="footer-bottom">
+                            <div class="footer-icons">
+                              <a href="https://www.instagram.com" target="_blank">
+                                <img src="/image/instagram.png" alt="Instagram 아이콘" />
+                              </a>
+                              <a href="https://www.kakaotalk.com" target="_blank">
+                                <img src="/image/kakaotalk.png" alt="KakaoTalk 아이콘" />
+                              </a>
+                            </div>
+                            <div class="footer-policy">
+                              <p>
+                                <a href="/privacy-policy">개인정보 처리방침</a> |
+                                <a href="/terms-of-service">사이트 이용약관</a> |
+                                <a href="/cookie-policy">쿠키 정책</a> |
+                                <a href="/company-info">사업자 정보</a>
+                              </p>
+                            </div>
+                            <div class="footer-signature">
+                              <img src="/image/kayak.png" alt="가약 이미지" />
+                            </div>
+                          </div>
+                        </div>
+                      </footer>
+                      
+                      
     </div>
 </body>
 </html>

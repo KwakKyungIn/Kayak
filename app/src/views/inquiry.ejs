@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가약 - Custom Wedding</title>
+    <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" type="text/css" href="/css/inquiry.css"/>
+</head>
+
+<body>
+    <div class="scroll-container">
+        <!-- 배경 섹션 -->
+        <section id="background" class="book_page-section1">
+            <!-- 오른쪽 상단 메뉴 -->
+            <div class="menu">
+                <a href="product_list_page">상품</a>
+                <a href="book_page">예약</a>
+                <a href="inquiry">문의</a>
+                <a href="#">확인</a>
+            </div>
+
+            <!-- 예약 확인서 제목 및 코드 섹션 -->
+            <div class="reservation-header">
+                <h1 class="reservation-main-title">방문 상담 예약 확인서</h1>
+                <div class="reservation-code">
+                    <label for="reservation-id">예약코드</label>
+                    <input type="text" id="reservation-id" placeholder="B-1227492">
+                </div>
+            </div>
+
+
+
+        </section>
+                    <!-- 예약 확인서 섹션 -->
+        <div class="reservation-wrapper">
+            <div class="reservation-container">
+                <!-- 주문 제품 정보 -->
+                <div class="order-info">
+
+                    <h2 style="padding-bottom: 10px; border-bottom: 2px solid #000000;">고객 정보</h2>
+                    
+                    <form class="form-container">
+                        <!-- 성함 -->
+                        <div class="form-group">
+                            <label for="name">성함 <span style="color: red;">*</span></label>
+                            <input type="text" id="name" placeholder="15자 이내로 입력해주세요." required style="width: 350px;">
+                        </div>
+                        <!-- 휴대전화 -->
+                        <div class="form-group">
+                            <label for="mobile">휴대전화 <span style="color: red;">*</span></label>
+                            <div class="inline-fields">
+                            <select class="small-input">
+                                <option>010</option>
+                                <option>011</option>
+                                <option>016</option>
+                            </select>
+                            <input type="text" class="small-input" placeholder="123456789" required style="width: 281px;">
+                            </div>
+                        </div>
+                        <!-- 이메일 -->
+                        <div class="form-group">
+                            <label for="email">이메일 <span style="color: red;">*</span></label>
+                            <input type="email" id="email" placeholder="15자 이내로 입력해주세요." required style="width: 350px;">
+                        </div>
+                    
+                        </form>
+                        <h2 style="padding-top: 30px; padding-bottom: 10px; border-bottom: 2px solid #000000;">문의 정보</h2>
+                        <form class="form-container">
+                            <div class="form-group">
+                                <label for="email">문의종류 <span style="color: red;">*</span></label>
+                                <select class="small-input" style="width: 350px;">
+                                    <option>문의 종류를 선택해주세요</option>
+                                    <option>011</option>
+                                    <option>016</option>
+                                </select>
+                            </div>
+                        <!-- 문의사항 -->
+                        <div class="form-group-top">
+                            <label for="requests" style="padding-top: 5px;">문의 사항</label>
+                            <textarea class ="requests" id="requests" placeholder="요청사항을 입력해주세요."></textarea>
+                        </div>
+
+                        <h2 style="padding-top: 30px;">개인정보 수입 및 이용에 대한 안내 (필수 수집 및 이용항목)</h2>
+                        <h3 style="padding-top: 10px;">문의 주신 내용의 답변을 위하여 고객님의 개인정보를 수집합니다. 개인정보 수집에 동의하신 분에 한하여 문의 접수가 가능합니다.</h2>
+                        <h3 style="padding-top: 0px; ">수집하는 개인 정보 항목 : 이름, 연락처, 이메일</h3>
+                        <div class = "form-check">
+                            <input type="checkbox" class ="personal">
+                            <h3 >동의합니다</h3>
+                        </div>
+
+                        <div class="cart-button-container">
+                            <a href="#" class="cart-button">
+                                <span class="item-count">문의글 전송하기</span>
+                                <span class="arrow">></span>
+                            </a>
+                            </div>
+
+                        </form>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <div class="footer-content">
+                <p>© 2025 My Website. All rights reserved.</p>
+                <p>Contact: support@mywebsite.com</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -5,8 +5,8 @@ body {
     background-color: rgb(242, 242, 242);
     color: black;
     position: relative;
-    height: 100vh; /* 슬라이드 높이에 맞게 유지 */
-    overflow: auto; /* 전체 페이지의 스크롤 제거 */
+    height: 100%; /* 슬라이드 높이에 맞게 유지 */
+    overflow: auto; /* 수직 스크롤 활성화 */
     
 }
 /* 상단 메뉴 */
@@ -45,13 +45,12 @@ body {
 }
 
 .scroll-container {
+    position: relative; /* 자식 요소 배치를 자연스럽게 지원 */
     width: 95%;
     height: 100%;
     flex-direction: column; /* 섹션을 세로로 배치 */
-    /* display: flex; 의미 찾아보기*/
     margin: auto; /* 기본 중앙 배치 */
     justify-content: center;
-    /* align-items: center;의미 찾기 */
     background-color: #ffffff;
     overflow-y: auto; /* 수직 스크롤 활성화 */
     overflow-x: hidden; /* 가로 스크롤 방지 */
@@ -107,12 +106,12 @@ body {
 
 /* 예약 확인서 전체 컨테이너 */
 .reservation-wrapper {
-    position: absolute;
-    top: 200px; /* 배경 이미지에서 아래로 띄우기 */
+    position: relative;
+    top: -150px; /* 배경 이미지에서 아래로 띄우기 */
     left: 50%;
     transform: translateX(-50%);
     width: 60%; /* 페이지 너비 */
-    
+    margin-bottom: -150px;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     padding: 20px;
@@ -394,4 +393,20 @@ padding-left: 10px; /* 추가적인 여백을 원할 경우 */
     height: auto; /* 비율을 유지하며 크기를 조정 */
     display: block; /* 이미지를 블록 요소로 변경 */
     margin: 0 auto; /* 이미지가 중앙에 위치하도록 설정 */
+}
+
+/* Footer 전체 스타일 */
+.footer {
+  background-color: #f8f5f0; /* 배경색 */
+  color: #333; /* 텍스트 색상 */
+  padding: 20px 0; /* 위아래 여백 */
+  border-top: 1px solid #ddd; /* 상단에 얇은 선 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+  font-size: 14px; /* 글씨 크기 */
+  margin-top: 40px; /* 위쪽과의 여백 */
+}
+
+/* Footer 내부 콘텐츠 */
+.footer-content p {
+  margin: 5px 0; /* 각 문단 사이의 간격 */
 }

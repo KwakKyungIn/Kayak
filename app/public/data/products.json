@@ -1,0 +1,15 @@
+[
+    {
+      "id": 1,
+      "name": "제품 이름 1",
+      "e_name": "Product_1",
+      "file_name": "main_1.png"
+    },
+    {
+      "id": 2,
+      "name": "제품 이름 2",
+      "e_name": "Product_2",
+      "file_name": "main_2.png"
+    }
+  ]
+  
