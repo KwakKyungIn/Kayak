@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "name": "A세트 플라워",
+    "e_name": "MaSAF1",
+    "file_name": "MaSAF1_1.png",
+    "mainImage" :"MaSAF1_main.png",
+    "sliderImages": ["MaSAF1_slider_1.png","MaSAF1_slider_2.png","MaSAF1_slider_3.png"],
+    "description" : "메인 세트 계단 장식의 a세트 플라워"
+  }
+]

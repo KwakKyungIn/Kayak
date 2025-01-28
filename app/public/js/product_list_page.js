@@ -26,39 +26,51 @@ document.querySelectorAll('.tab-item > a').forEach(tab => {
     }
   });
   //탭 메뉴 끝~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  //페이지 생성 추가
-  fetch('/data/products.json') // JSON 파일 경로
-  .then((response) => response.json())
-  .then((data) => {
-    const productGrid = document.querySelector('.product-grid');
 
-    data.forEach((product) => {
-      const productElement = document.createElement('div');
-      productElement.classList.add('product');
+  const updateHeartStatus = async () => {
+    try {
+      const response = await fetch('/api/heart');
+      const heartedProducts = await response.json(); // 찜된 제품 목록
+      const heartButtons = document.querySelectorAll('.heart-button');
+  
+      heartButtons.forEach((button) => {
+        const productCode = button.dataset.productCode;
+        if (heartedProducts.some((product) => product.product_code === productCode)) {
+          button.classList.add('hearted'); // 찜된 상태
+          button.textContent = '❤️';
+        } else {
+          button.classList.remove('hearted'); // 찜되지 않은 상태
+          button.textContent = '♡';
+        }
+      });
+    } catch (error) {
+      console.error('찜 상태 업데이트 오류:', error);
+    }
+  };
+  
+  // 페이지 로드 시 찜 상태 업데이트
+  updateHeartStatus();
 
-      // a 태그 생성
-      const linkElement = document.createElement('a');
-      linkElement.href = `/product_info_page?id=${product.e_name}`; // 상세 페이지 링크
-      linkElement.target = '_self'; // 같은 창에서 열기
-
-      // img 태그 생성
-      const imgElement = document.createElement('img');
-      imgElement.src = `/image/product_list/product/${product.file_name}`; // 파일 이름 기반 이미지 경로
-      imgElement.alt = product.name;
-
-      // a 태그에 img 태그 추가
-      linkElement.appendChild(imgElement);
-
-      // p 태그 생성
-      const description = document.createElement('p');
-      description.textContent = product.name;
-
-      // div.product에 요소 추가
-      productElement.appendChild(linkElement); // a 태그 추가
-      productElement.appendChild(description); // p 태그 추가
-
-      // .product-grid에 product 추가
-      productGrid.appendChild(productElement);
-    });
-  })
-  .catch((error) => console.error('데이터 로드 중 오류:', error));
+  const toggleHeart = async (productCode, button) => {
+    try {
+      if (button.classList.contains('hearted')) {
+        // 찜 해제 요청
+        console.log("코드", productCode);
+        await fetch(`/api/heart/remove/${productCode}`, { method: 'DELETE' });
+        button.classList.remove('hearted');
+        button.textContent = '♡';
+      } else {
+        // 찜 추가 요청
+        await fetch('/api/heart/add', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ product_code: productCode }),
+        });
+        button.classList.add('hearted');
+        button.textContent = '❤️';
+      }
+    } catch (error) {
+      console.error('찜 상태 변경 오류:', error);
+    }
+  };
+  

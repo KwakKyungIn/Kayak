@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "name": "A세트 플라워",
+    "e_name": "SuPAF1",
+    "file_name": "SuPAF1_1.png",
+    "mainImage" :"SuPAF1_main.png",
+    "sliderImages": ["SuPAF1_slider_1.png","SuPAF1_slider_2.png","SuPAF1_slider_3.png"],
+    "description" : "서브 세트 포토존의 a세트 플라워"
+  }
+]

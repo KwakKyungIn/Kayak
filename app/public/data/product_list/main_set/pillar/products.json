@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "name": "A세트 플라워",
+    "e_name": "MaPAF1",
+    "file_name": "MaPAF1_1.png",
+    "mainImage" :"MaPAF1_main.png",
+    "sliderImages": ["MaPAF1_slider_1.png","MaPAF1_slider_2.png","MaPAF1_slider_3.png"],
+    "description" : "메인 세트 기둥 장식의 A세트 플라워"
+  },  
+  {
+    "id": 1,
+    "name": "A세트 플라워",
+    "e_name": "MaPBF1",
+    "file_name": "MaPBF1_1.png",
+    "mainImage" :"MaPBF1_main.png",
+    "sliderImages": ["MaPBF1_slider_1.png","MaPBF1_slider_2.png","MaPBF1_slider_3.png"],
+    "description" : "메인 세트 기둥 장식의 B세트 플라워"
+  }
+  ]
+  

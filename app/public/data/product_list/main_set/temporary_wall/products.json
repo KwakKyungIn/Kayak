@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "name": "A세트 플라워",
+    "e_name": "MaTAF1",
+    "file_name": "MaTAF1_1.png",
+    "mainImage" :"MaTAF1_main.png",
+    "sliderImages": ["MaTAF1_slider_1.png","MaTAF1_slider_2.png","MaTAF1_slider_3.png"],
+    "description" : "메인 세트 가벽 장식의 a세트 플라워"
+  }
+]

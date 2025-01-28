@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가약 - Custom Wedding</title>
+    <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="/css/product_info_page.css">
+</head>
+<body>
+
+<!-- 슬라이드 컨테이너 -->
+<div class="scroll-container">
+    <!-- 새로운 슬라이드 -->
+    <section class="product_info_page-section1">
+        <!-- 오른쪽 상단 메뉴 -->
+        <div class="menu">
+            <a href="product_list_page">상품</a>
+            <a href="book_page">예약</a>
+            <a href="inquiry">문의</a>
+            <a href="#">확인</a>
+        </div>
+    </section>
+
+    <!-- 콘텐츠 섹션 -->
+    <div class="product_info_page-section2">
+        <!-- 왼쪽 이미지 섹션 -->
+        <div class="product_info_page-section2-sector1">
+            <img src="/image/products_info/product_A/A_original.png" alt="제품 이미지">
+        </div>
+        <!-- 오른쪽 정보 섹션 -->
+        <div class="product_info_page-section2-sector2">
+            <h2>제품명</h2>
+            <p class="product_info_page-section2-sector2-product-code">B-1234567</p>
+            <div class="product_info_page-section2-sector2-product-description-box">
+                제품 설명이 들어가는 칸
+            </div>
+            <div class ="dropdown-menu">
+                <span class="dropdown-label">색상</span>
+            <!-- 드롭다운 메뉴 -->
+                <!-- <div class="dropdown">
+                    <button class="dropbtn">
+                        <span class="dropbtn_icon"></span>
+                        <span class="dropbtn_content">꽃</span>
+                    </button>
+                    <div class="dropdown-content">
+                        <div class="fastfood">A</div>
+                        <div class="fastfood">B</div>
+                        <div class="fastfood">C</div>
+                        <div class="fastfood">D</div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="custom-color-options">
+                <label class="custom-radio">
+                    <input type="radio" name="custom-color" value="black">
+                    <span class="checkmark checkmark-black"></span> 검은색
+                </label>
+                <label class="custom-radio">
+                    <input type="radio" name="custom-color" value="white">
+                    <span class="checkmark checkmark-white"></span> 흰색
+                </label>
+            </div>
+            <div class="custom-buttons">
+                <button class="custom-inquire-button">서랍 넣기</button>
+                <button class="custom-cart-button">달력 확인</button>
+            </div>
+            
+            <div class="product-info">
+                <div class="info-item">
+                    <div class="info-header">
+                        <span>제품 크기</span>
+                        <button class="toggle-button">+</button>
+                    </div>
+                    <div class="info-content">
+                        <p>제품 크기에 대한 상세 설명이 여기에 들어갑니다. 예: 100cm x 50cm x 30cm</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-header">
+                        <span>유의사항</span>
+                        <button class="toggle-button">+</button>
+                    </div>
+                    <div class="info-content">
+                        <p>유의사항에 대한 상세 설명이 여기에 들어갑니다. 예: 직사광선을 피하고 건조한 곳에 보관하세요.</p>
+                    </div>
+                </div>
+            </div>
+            
+
+
+        </div>
+        
+        
+
+    </div>
+
+    <section class="product_info_page-section3">
+        <div class="slider-container">
+            <!-- <button class="arrow prev" aria-label="Previous Image">&#9664;</button> -->
+            <div class="slider">
+                <img src="/image/products_info/product_A/slider_image/A_slider_1.png" alt="Product Image 1">
+                <img src="/image/products_info/product_A/slider_image/A_slider_1.png" alt="Product Image 2">
+                <img src="/image/products_info/product_A/slider_image/A_slider_1.png" alt="Product Image 3">
+            </div>
+            <!-- <button class="arrow next" aria-label="Next Image">&#9654;</button> -->
+            <div class="pagination"></div> <!-- 페이지 인디케이터 추가 -->
+        </div>
+
+    </section>
+
+    <section class="product_info_page-section35">
+        <div>
+            <h2>본품 구성</h2>
+        </div>
+        <div class="content-product-grid">
+            <div class="content-product">
+                <img src="/image/products_info/product_A/supplements/main_2.png" alt="Product Image">
+                <p>제품 구성 1</p>
+            </div>
+            <div class="content-product">
+                <img src="/image/products_info/product_A/supplements/main_2.png" alt="Product Image">
+                <p>제품 구성 2</p>
+            </div>
+            <div class="content-product">
+                <img src="/image/products_info/product_A/supplements/main_2.png" alt="Product Image">
+                <p>제품 구성 3</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <div class="product_info_page-section4">
+        <h2>추천 상품</h2>
+        <div class="product-grid2">
+            <div class="product-item">
+                <a href="product_info_page">
+                    <img src="/image/product_list/main_1.png" alt="Product Image">
+                </a>
+            </div>
+            <div class="product-item">
+                <img src="example2.jpg" alt="상품 이미지">
+                <!-- <p class="product-name">제품명</p>
+                <p class="product-code">B-1227492</p> -->
+            </div>
+            <div class="product-item">
+                <img src="example3.jpg" alt="상품 이미지">
+                <!-- <p class="product-name">제품명</p>
+                <p class="product-code">B-1227492</p> -->
+            </div>
+            <div class="product-item">
+                <img src="example4.jpg" alt="상품 이미지">
+                <!-- <p class="product-name">제품명</p>
+                <p class="product-code">B-1227492</p> -->
+            </div>
+            <div class="product-item">
+                <img src="example5.jpg" alt="상품 이미지">
+                <!-- <p class="product-name">제품명</p>
+                <p class="product-code">B-1227492</p> -->
+            </div>
+            <div class="product-item">
+                <img src="example6.jpg" alt="상품 이미지">
+                <!-- <p class="product-name">제품명</p>
+                <p class="product-code">B-1227492</p> -->
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- JavaScript 연결 -->
+<script src="/js/product_info_page.js"></script>
+</body>
+</html>

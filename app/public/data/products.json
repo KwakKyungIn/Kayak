@@ -1,15 +1,93 @@
 [
-    {
-      "id": 1,
-      "name": "제품 이름 1",
-      "e_name": "Product_1",
-      "file_name": "main_1.png"
-    },
-    {
-      "id": 2,
-      "name": "제품 이름 2",
-      "e_name": "Product_2",
-      "file_name": "main_2.png"
-    }
+  {
+    "id": 1,
+    "name": "A세트 플라워",
+    "e_name": "SuBAF1",
+    "file_name": "SuBAF1_1.png",
+    "mainImage" :"SuBAF1_main_1.png",
+    "sliderImages": ["SuBAF1_slider_1.png","SuBAF1_slider_2.png","SuBAF1_slider_3.png","SuBAF1_slider_4.png","SuBAF1_slider_5.png"],
+    "description" : "서브 세트 신부대기실의 a세트 플라워"
+  },
+  {
+    "id": 2,
+    "name": "A세트 플라워",
+    "e_name": "SuPAF1",
+    "file_name": "SuPAF1_1.png",
+    "mainImage" :"SuPAF1_main_1.png",
+    "sliderImages": ["SuPAF1_slider_1.png","SuPAF1_slider_2.png"],
+    "description" : "서브 세트 포토존의 a세트 플라워"
+  },
+  {
+    "id": 3,
+    "name": "A세트 플라워",
+    "e_name": "MaFlAF1",
+    "file_name": "MaFlAF1_1.png",
+    "mainImage" :"MaFlAF1_main_1.png",
+    "sliderImages": ["MaFlAF1_slider_1.png","MaFlAF1_slider_2.png","MaFlAF1_slider_3.png","MaFlAF1_slider_4.png","MaFlAF1_slider_5.png","MaFlAF1_slider_6.png","MaFlAF1_slider_7.png","MaFlAF1_slider_8.png","MaFlAF1_slider_9.png"],
+    "description" : "메인 세트 꽃 장식의 a세트 플라워"
+  },
+  {
+    "id": 4,
+    "name": "A세트 플라워",
+    "e_name": "MaPAF1",
+    "file_name": "MaPAF1_1.png",
+    "mainImage" :"MaPAF1_main_1.png",
+    "sliderImages": ["MaPAF1_slider_1.png","MaPAF1_slider_2.png","MaPAF1_slider_3.png","MaPAF1_slider_4.png","MaPAF1_slider_5.png","MaPAF1_slider_6.png","MaPAF1_slider_7.png","MaPAF1_slider_8.png","MaPAF1_slider_9.png"],
+    "description" : "메인 세트 기둥 장식의 A세트 플라워"
+  },  
+  {
+    "id": 5,
+    "name": "B세트 플라워",
+    "e_name": "MaPBF1",
+    "file_name": "MaPBF1_1.png",
+    "mainImage" :"MaPBF1_main_1.png",
+    "sliderImages": ["MaPBF1_slider_1.png","MaPBF1_slider_2.png","MaPBF1_slider_3.png","MaPBF1_slider_4.png","MaPBF1_slider_5.png","MaPBF1_slider_6.png","MaPBF1_slider_7.png"],
+    "description" : "메인 세트 기둥 장식의 B세트 플라워"
+  },
+  {
+    "id": 6,
+    "name": "A세트 플라워",
+    "e_name": "MaSAF1",
+    "file_name": "MaSAF1_1.png",
+    "mainImage" :"MaSAF1_main_1.png",
+    "sliderImages": ["MaSAF1_slider_1.png","MaSAF1_slider_2.png","MaSAF1_slider_3.png","MaSAF1_slider_4.png","MaSAF1_slider_5.png","MaSAF1_slider_6.png","MaSAF1_slider_7.png","MaSAF1_slider_8.png"],
+    "description" : "메인 세트 계단 장식의 a세트 플라워"
+  },
+  {
+    "id": 7,
+    "name": "A세트 플라워",
+    "e_name": "MaTAF1",
+    "file_name": "MaTAF1_1.png",
+    "mainImage" :"MaTAF1_main_1.png",
+    "sliderImages": ["MaTAF1_slider_1.png","MaTAF1_slider_2.png","MaTAF1_slider_3.png","MaTAF1_slider_4.png","MaTAF1_slider_5.png","MaTAF1_slider_6.png","MaTAF1_slider_7.png","MaTAF1_slider_8.png","MaTAF1_slider_9.png","MaTAF1_slider_10.png","MaTAF1_slider_11.png"],
+    "description" : "메인 세트 가벽 장식의 a세트 플라워"
+  },
+  {
+    "id": 8,
+    "name": "A세트 접이식",
+    "e_name": "EtCA1",
+    "file_name": "EtCA1_1.png",
+    "mainImage" :"EtCA1_main_1.png",
+    "sliderImages": ["EtCA1_slider_1.png","EtCA1_slider_2.png","EtCA1_slider_3.png","EtCA1_slider_4.png"],
+    "description" : "기타의 의자 접이식"
+  },
+  {
+    "id": 9,
+    "name": "A세트 기본원형",
+    "e_name": "EtCA2",
+    "file_name": "EtCA2_1.png",
+    "mainImage" :"EtCA2_main_1.png",
+    "sliderImages": ["EtCA2_slider_1.png","EtCA2_slider_2.png","EtCA2_slider_3.png"],
+    "description" : "기타의 의자 일체형"
+  },
+  {
+    "id": 10,
+    "name": "A세트 플라워",
+    "e_name": "CeVAF1",
+    "file_name": "CeVAF1_1.png",
+    "mainImage" :"CeVAF1_main_1.png",
+    "sliderImages": ["CeVAF1_slider_1.png","CeVAF1_slider_2.png","CeVAF1_slider_3.png","CeVAF1_slider_4.png","CeVAF1_slider_5.png","CeVAF1_slider_6.png","CeVAF1_slider_7.png","CeVAF1_slider_8.png","CeVAF1_slider_9.png","CeVAF1_slider_10.png","CeVAF1_slider_11.png","CeVAF1_slider_12.png","CeVAF1_slider_13.png"],
+    "description" : "센터피스의 버진로드 a세트 플라워"
+  }
   ]
   

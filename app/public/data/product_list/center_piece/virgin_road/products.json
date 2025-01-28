@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "name": "A세트 플라워",
+    "e_name": "CeVAF1",
+    "file_name": "CeVAF1_1.png",
+    "mainImage" :"CeVAF1_main.png",
+    "sliderImages": ["CeVAF1_slider_1.png","CeVAF1_slider_2.png","CeVAF1_slider_3.png"],
+    "description" : "센터피스의 버진로드 a세트 플라워"
+  }
+]
