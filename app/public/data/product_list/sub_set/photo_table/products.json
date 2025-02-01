@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "name": "A세트 플라워",
+   "name": "A세트 포토가벽",
     "e_name": "SuPAF1",
     "file_name": "SuPAF1_1.png",
-    "mainImage" :"SuPAF1_main.png",
-    "sliderImages": ["SuPAF1_slider_1.png","SuPAF1_slider_2.png","SuPAF1_slider_3.png"],
-    "description" : "서브 세트 포토존의 a세트 플라워"
+    "mainImage" :"SuPAF1_main_1.png",
+    "sliderImages": ["SuPAF1_slider_1.png","SuPAF1_slider_2.png"],
+    "description" : "꽃으로 화사하게 장식된 소형 포토가벽으로  감각적인 분위기를 연출합니다. 우아한 플라워 데코와 함께 액자 속 사진이나 메시지를 담아 특별한 의미를 더할 수 있습니다. 버진로드 입구쪽에 배치하여 더욱 풍성한 연출이 가능합니다."
   }
 ]

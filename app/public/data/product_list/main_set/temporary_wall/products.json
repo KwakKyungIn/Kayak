@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "name": "A세트 플라워",
+    "name": "A세트 기본 가벽",
     "e_name": "MaTAF1",
     "file_name": "MaTAF1_1.png",
-    "mainImage" :"MaTAF1_main.png",
-    "sliderImages": ["MaTAF1_slider_1.png","MaTAF1_slider_2.png","MaTAF1_slider_3.png"],
-    "description" : "메인 세트 가벽 장식의 a세트 플라워"
+    "mainImage" :"MaTAF1_main_1.png",
+    "sliderImages": ["MaTAF1_slider_1.png","MaTAF1_slider_2.png","MaTAF1_slider_3.png","MaTAF1_slider_4.png","MaTAF1_slider_5.png","MaTAF1_slider_6.png","MaTAF1_slider_7.png","MaTAF1_slider_8.png","MaTAF1_slider_9.png","MaTAF1_slider_10.png","MaTAF1_slider_11.png"],
+    "description" : "자연스러우면서도 세련된 분위기를 연출하는 공간으로 최근 웨딩 트렌드에서 자주 볼 수 있는 스타일입니다. 단순히 결혼식을 치르는 장소를 넘어, 포토존으로 활용하여 예술 작품처럼 공간을 꾸며 특별한 날을 더욱 기억에 남게 만듭니다."
   }
 ]

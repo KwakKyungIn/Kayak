@@ -196,160 +196,108 @@ text-align: left; /* 왼쪽 정렬 추가 */
 padding-left: 10px; /* 추가적인 여백을 원할 경우 */
 
 }
+
 .form-container {
-    width: 600px;
-    margin: 0 auto;
-  }
-  
-  .form-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-  }
-  
-  .form-group-detail {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap : 15px;
-  }
-  
-  .inline-fields {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .form-group label {
-    width: 120px; /* 레이블 고정 너비 */
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  
-  .display-box {
-    padding: 10px;
-    font-size: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f9f9f9;
-    box-sizing: border-box;
-    min-width: 120px;
-    flex-grow: 1;
-    text-align: left;
-  }
-  
-  .display-box.small-input {
-    width: auto;
-    height: 35px;
-    padding: 5px 10px;
-    text-align: center;
-  }
-  
-  .display-box.requests {
-    height: 200px;
-    width: 350px;
-  }
-  
-  .address_btn {
-    background-color: #000;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 10px;
-  }
-  
-  .address_btn:hover {
-    background-color: #444;
-  }
-  
+  width: 600px;
+  margin: 0 auto;
+}
+
+/* 기본 form-group 스타일 (단일 입력 필드용) */
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-group label,
+.form-group-top label {
+  width: 120px; /* 레이블 고정 너비 */
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* form-group-top (여러 개의 입력 필드가 있는 그룹) */
+.form-group-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* form-group-top 내부의 입력 필드 정렬 */
+.form-group-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label[for="address"] {
+  position: relative;
+  top: -25px; /* 원하는 만큼 조절 */
+}
+
+label[for="requests"] {
+  position: relative;
+  top: -85px; /* 원하는 만큼 조절 */
+}
+/* 인라인 필드 정리 (전화번호, 날짜/시간 입력 등) */
+.inline-fields {
+  display: flex;
+  gap: 10px;
+}
+
+/* 공통 입력 필드 스타일 */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+  padding: 10px;
+  font-size: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* 작은 입력 필드 스타일 (전화번호, 시간 선택 등) */
+.small-input {
+  width: auto;
+  height: 35px;
+  padding: 5px 10px;
+  font-size: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* 주소 입력 버튼 */
+.address_btn {
+  height: 35px;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.address_btn:hover {
+  background-color: #444;
+}
+
+/* 텍스트 입력 박스 스타일 */
+textarea {
+  height: 80px;
+  resize: none;
+}
+
+/* 요청사항 입력 창 스타일 */
+.requests {
+  height: 200px;
+  width: 350px;
+}
 
 
-
-  .form-group {
-    display: flex;
-    align-items: center ;
-    margin-bottom: 15px;
-  }
-  .form-group-top{
-    display: flex;
-    align-items: center top;
-    margin-bottom: 15px;
-  }
-  .form-group-detail {
-    display: flex;
-    align-items: center;     
-    flex-direction: column; /* 요소를 세로로 배치 */
-    align-items: flex-start; /* 왼쪽 정렬 */
-  }
-  .form-group label {
-    width: 120px; /* 레이블 고정 너비 */
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  .form-group-top label {
-    width: 120px; /* 레이블 고정 너비 */
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  .form-group .inline-fields {
-    display: flex;
-    gap: 10px;
-
-  }
-  .form-group-top .inline-fields {
-    display: flex;
-    gap: 10px;
-
-  }
-  .requests{
-    height: 200px;
-    width: 350px;
-  }
-  input[type="text"],
-  input[type="email"],
-  input[type="date"],
-  select,
-  textarea {
-    padding: 10px;
-    font-size: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  .form-group-fixed{
-    padding: 10px;
-    font-size: 10px;
-    font-weight: bolder;
-    color : #838383;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  textarea {
-    height: 80px;
-    resize: none;
-  }
-  .small-input {
-    width: auto;
-    height : 35px;
-    padding: 10px;
-    font-size: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  .address_btn {
-    background-color: #000;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 10px;
-  }
-  .address_btn:hover {
-    background-color: #444;
-  }
   /* 제품 설명 */
 .description-box {
     width: 100%;       /* 텍스트 박스 너비 고정 */
@@ -410,3 +358,157 @@ padding-left: 10px; /* 추가적인 여백을 원할 경우 */
 .footer-content p {
   margin: 5px 0; /* 각 문단 사이의 간격 */
 }
+
+
+
+
+.order-summary {
+  display: flex; /* 가로 정렬 */
+  justify-content: space-between; /* 양쪽 정렬 */
+  align-items: flex-start; /* 텍스트 위쪽 정렬 */
+  margin-top: 20px; /* 상단 여백 */
+  padding: 10px 0; /* 패딩만 추가 */
+  border-top: 1.5px solid #555; /* 위쪽 구분선 */
+  border-bottom: 2px solid #555; /* 아래쪽 구분선 */
+}
+
+.order-summary-left {
+  flex: 1; /* 왼쪽 영역 너비 */
+  text-align: left; /* 텍스트 왼쪽 정렬 */
+  font-size: 14px; /* 글자 크기 */
+  font-weight: bolder;
+  line-height: 1; /* 줄 간격 고정 */
+  padding-left: 10px;
+}
+
+.order-summary-left p {
+  margin: 0; /* 모든 여백 제거 */
+  padding: 0; /* 모든 패딩 제거 */
+  line-height: 2.5; /* 줄 간격 유지 */
+}
+
+.order-summary-right {
+  flex: 2; /* 오른쪽 영역 더 넓게 */
+  text-align: left; /* 전체 텍스트 왼쪽 정렬 */
+  font-size: 10px;
+  line-height: 3; /* 줄 간격 */
+}
+
+.order-detail {
+  display: flex; /* 가로 정렬 */
+  justify-content: space-between; /* 좌우 정렬 */
+}
+
+.order-detail .label {
+  text-align: left; /* 레이블 왼쪽 정렬 */
+  flex: 1;
+}
+
+.order-detail .value {
+  text-align: right; /* 값 오른쪽 정렬 */
+  flex: 1;
+}
+
+.order-detail .value2 {
+  text-align: left; /* 값 오른쪽 정렬 */
+  flex: 0.1;
+}
+
+.order-summary-right hr {
+  margin: 10px 0; /* 구분선 위아래 간격 */
+  border: 0;
+  border-top: 1px solid #ddd; /* 구분선 스타일 */
+}
+
+.order-detail.total {
+  margin-top: 10px;
+  font-weight: bold; /* 강조 */
+}
+.footer {
+  background-color: #f9f9f9; /* 배경색 */
+  color: #a1a1a1; /* 텍스트 색 */
+  font-family: Arial, sans-serif;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 가로 방향 중앙 정렬 */
+}
+.footer-big-container {
+  width: 80%; /* 부모 요소의 너비를 기준으로 */
+}
+
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.footer-service {
+padding-left: 100px;
+}
+.footer-logo img {
+  max-width: 130px; /* 로고 크기 */
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-info h4 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.footer-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #dcdcdc;
+  padding-top: 10px;
+}
+
+.footer-icons img {
+  width: 30px; /* 아이콘 크기 */
+  margin-right: 10px;
+}
+
+.footer-policy {
+  font-size: 15px;
+  text-align: center;
+}
+
+.footer-signature img {
+  max-width: 60px; /* '가약' 이미지 크기 */
+}
+/* 공통 스타일링 */
+.footer a {
+  text-decoration: none; /* 밑줄 제거 */
+  color: inherit; /* 텍스트 색상 상속 */
+  transition: color 0.3s ease; /* 호버 효과 추가 */
+}
+
+.footer a:hover {
+  color: #007BFF; /* 링크에 호버 시 색상 변경 */
+}
+
+/* "개인정보 처리방침" 등 정책 간격 조정 */
+.footer-policy a {
+  margin: 0 10px; /* 링크 간격 조정 */
+}
+
+.footer-policy a:first-child {
+  margin-left: 0; /* 첫 링크의 왼쪽 간격 제거 */
+}
+
+.footer-policy a:last-child {
+  margin-right: 0; /* 마지막 링크의 오른쪽 간격 제거 */
+}
+

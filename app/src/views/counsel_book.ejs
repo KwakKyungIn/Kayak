@@ -17,7 +17,7 @@
                 <a href="product_list_page">상품</a>
                 <a href="book_page">예약</a>
                 <a href="inquiry">문의</a>
-                <a href="#">확인</a>
+                <a href="confirm_reservation">확인</a>
             </div>
 
             <!-- 예약 확인서 제목 및 코드 섹션 -->
@@ -40,63 +40,6 @@
                     <div class="image-container1">
                         <img src="/image/counsel_book.png" alt="상품 이미지" class="center-image1">
                     </div>
-                    <h2>주문제품정보</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>제품 정보</th>
-                                <th>할인 금액</th>
-                                <th>결제 정보</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- 첫 번째 제품 -->
-                            <tr>
-                                <td class="product-info-cell">
-                                    <img src="/image/info_example.png" alt="제품 이미지">
-                                    <div class="product-info-text">
-                                        <p>제품 이름</p>
-                                        <p>제품번호</p>
-                                        <p>수량: 1개</p>
-                                        <p>컬러: 화이트 / 레드</p>
-                                        <p>1,000,000원</p>
-                                    </div>
-                                </td>
-                                <td>
-                                    <p class="discount-amount">500,000원</p>
-                                </td>
-                                <td>
-                                    <p class="payment-amount">500,000원</p>
-                                </td>
-                            </tr>
-                            <tr class="option-row">
-                                <td colspan="3">선택1: [제품명 / 1,000,000원] [수량: 1개] [컬러: 화이트 / 레드]</td>
-                            </tr>
-                
-                            <!-- 두 번째 제품 -->
-                            <tr>
-                                <td class="product-info-cell">
-                                    <img src="/image/info_example.png" alt="제품 이미지">
-                                    <div class="product-info-text">
-                                        <p>제품 이름</p>
-                                        <p>제품번호</p>
-                                        <p>수량: 1개</p>
-                                        <p>컬러: 우드 / 화이트</p>
-                                        <p>1,000,000원</p>
-                                    </div>
-                                </td>
-                                <td>
-                                    <p class="discount-amount">500,000원</p>
-                                </td>
-                                <td>
-                                    <p class="payment-amount">500,000원</p>
-                                </td>
-                            </tr>
-                            <tr class="option-row">
-                                <td colspan="3">선택1: [제품명 / 1,000,000원] [수량: 1개] [컬러: 우드 / 화이트]</td>
-                            </tr>
-                        </tbody>
-                    </table>
 
                     <h2 style="padding-bottom: 10px; border-bottom: 2px solid #000000;">고객 정보</h2>
                     
@@ -104,44 +47,46 @@
                         <!-- 성함 -->
                         <div class="form-group">
                             <label for="name">성함 <span style="color: red;">*</span></label>
-                            <input type="text" id="name" placeholder="15자 이내로 입력해주세요." required>
+                            <input class ="name" type="text" id="name" placeholder="15자 이내로 입력해주세요." required>
                         </div>
                         <!-- 휴대전화 -->
                         <div class="form-group">
                             <label for="mobile">휴대전화 <span style="color: red;">*</span></label>
                             <div class="inline-fields">
-                            <select class="small-input">
+                            <select class="small-input-mobile">
                                 <option>010</option>
                                 <option>011</option>
                                 <option>016</option>
                             </select>
-                            <input type="text" class="small-input" placeholder="123456789" required>
+                            <input type="text" class="small-input-mobile" placeholder="123456789" required>
                             </div>
                         </div>
                         <!-- 예비전화 -->
                         <div class="form-group">
                             <label for="backup-phone">예비전화</label>
                             <div class="inline-fields">
-                            <select class="small-input">
+                            <select class="small-input-backup-phone">
                                 <option>010</option>
                                 <option>011</option>
                                 <option>016</option>
                             </select>
-                            <input type="text" class="small-input" placeholder="123456789">
+                            <input type="text" class="small-input-backup-phone" placeholder="123456789">
                             </div>
                         </div>
-                        <!-- 대여일/시간 -->
+
+
+                        <!-- 상담일-->
                         <div class="form-group">
-                            <label for="rental-date">대여일/시간 <span style="color: red;">*</span></label>
+                            <label for="rental-date">방문상담 날짜 <span style="color: red;">*</span></label>
                             <div class="inline-fields">
                             <!-- 연도/월/일 -->
-                            <input type="date" class="small-input">
+                            <input type="date" class="small-input-counsel-date">
                             <!-- 오전/오후 및 시간 -->
-                            <select class="small-input">
+                            <select class="small-input-time1">
                                 <option>오전</option>
                                 <option>오후</option>
                             </select>
-                            <select class="small-input">
+                            <select class="small-input-clock1">
                                 <option>00:00</option>
                                 <option>01:00</option>
                                 <option>02:00</option>
@@ -158,24 +103,62 @@
                             </select>
                             </div>
                         </div>
+                        <!-- 대여일/시간 -->
+                        <div class="form-group">
+                            <label for="rental-date">대여일/시간 <span style="color: red;">*</span></label>
+                            <div class="inline-fields">
+                            <!-- 연도/월/일 -->
+                            <input type="date" class="small-input-rent-date">
+                            <!-- 오전/오후 및 시간 -->
+                            <select class="small-input-time2">
+                                <option>오전</option>
+                                <option>오후</option>
+                            </select>
+                            <select class="small-input-clock2">
+                                <option>00:00</option>
+                                <option>01:00</option>
+                                <option>02:00</option>
+                                <option>03:00</option>
+                                <option>04:00</option>
+                                <option>05:00</option>
+                                <option>06:00</option>
+                                <option>07:00</option>
+                                <option>08:00</option>
+                                <option>09:00</option>
+                                <option>10:00</option>
+                                <option>11:00</option>
+                                <option>12:00</option>
+                            </select>
+                            </div>
+                        </div>
+
+                        <!-- 상담일-->
                         <!-- 이메일 -->
                         <div class="form-group">
                             <label for="email">이메일 <span style="color: red;">*</span></label>
-                            <input type="email" id="email" placeholder="15자 이내로 입력해주세요." required>
+                            <input class ="email"type="email" id="email" placeholder="15자 이내로 입력해주세요." required>
                         </div>
                         <!-- 식장주소 -->
                         <div class="form-group-top">
                             <label for="address">식장주소 <span style="color: red;">*</span></label>
-                                <div class="form-group-detail">
-                                    <div class="inline-fields">
+                            <div class="form-group-detail">
+                                <div class="inline-fields">
                                     <!-- 우편번호 -->
-                                    <input type="text" class="small-input" placeholder="우편번호를 입력해주세요.">
-                                    <button type="button" class="address_btn">우편번호</button>
-                                    </div>
-                                    <!-- 주소 입력 -->
-                                    <input type="text" placeholder="주소를 입력해주세요." style="margin-top: 10px; flex: 1;">
-                                </div>    
+                                    <input type="text" id="postcode" class="small-input-postcode" placeholder="우편번호를 입력해주세요." readonly>
+                                    <button type="button" class="address_btn" onclick="execDaumPostcode()">우편번호</button>
+                                </div>
+                                <div class="inline-fields">
+                                      <!-- 주소 입력 -->
+                                    <input type="text" id="roadAddress" class ="roadAddress" placeholder="주소를 입력해주세요." style="margin-top: 10px; flex: 1;" readonly>
+                                    <input type="text" id="detailAddress" class ="detailAddress" placeholder="상세 주소를 입력해주세요." style="margin-top: 10px; flex: 1;">
+
+                                </div>
+                              
+                            </div>    
                         </div>
+                        
+
+                        
                         <!-- 요청사항 -->
                         <div class="form-group-top">
                             <label for="requests">요청사항</label>
@@ -195,22 +178,272 @@
                         <BIG><B>&middot; </B></BIG>반납 절차 준수 : 반납 시 작업자와 함께 물품 상태를 확인하여 조류를 방지하십시오.<br>
                         <BIG><B>&middot; </B></BIG>재대여 방지 : 관련 물품을 제3자에게 등록하거나 재대여하는 행위는 금지됩니다.<br>
                         </div>
+
+                        <h2 style = "padding-top: 40px;">주문제품정보</h2>
+                        <table id ="dynamic-table-2">
+                            <thead>
+                                <tr>
+                                    <th>제품 정보</th>
+                                    <th>할인 금액</th>
+                                    <th>결제 정보</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+
+                        <div class="order-summary">
+                            <!-- 왼쪽: 총 주문금액 텍스트 -->
+                            <div class="order-summary-left">
+                                <p>총 주문금액</p>
+                            </div>
+
+                            <!-- 오른쪽: 주문 상품 수, 주문 금액, 할인 금액, 최종 결제 금액 -->
+                            <div class="order-summary-right">
+
+                            </div>
+                        </div>
                     
                 </div>
+                
+                
                 <div style="display: flex; justify-content: center; margin-top: 20px;">
                     <a class="next-btn" href="book_done">
-                        다음으로 넘어가기
+                        상담 예약하기
                     </a>
                 </div>
             </div>
         </div>
         
         <footer class="footer">
-            <div class="footer-content">
-                <p>© 2025 My Website. All rights reserved.</p>
-                <p>Contact: support@mywebsite.com</p>
+          <div class="footer-big-container">
+            <div class="footer-container">
+              <div class="footer-info">
+                <div class="footer-logo">
+                  <img src="/image/logo.png" alt="회사 로고" />
+                </div>
+                <div class="footer-company">
+                  <h4>회사</h4>
+                  <p>사업자 주소 | 인천부평구 부개동 55-555</p>
+                  <p>사업자 등록 번호 | 00000-0000-0000-0000</p>
+                  <p>대표 전화번호 | (010) 9931 1981</p>
+                </div>
+                <div class="footer-service">
+                  <h4>고객 서비스</h4>
+                  <p><a href="/faq">자주 묻는 질문(FAQ)</a></p>
+                  <p><a href="/support">고객 지원/고객 문의</a></p>
+                  <p><a href="/returns">반품 및 환불 정책</a></p>
+                  <p><a href="/contact">영업팀과 문의</a></p>
+                </div>
+              </div>
             </div>
+            <div class="footer-bottom">
+              <div class="footer-icons">
+                <a href="https://www.instagram.com" target="_blank">
+                  <img src="/image/instagram.png" alt="Instagram 아이콘" />
+                </a>
+                <a href="https://www.kakaotalk.com" target="_blank">
+                  <img src="/image/kakaotalk.png" alt="KakaoTalk 아이콘" />
+                </a>
+              </div>
+              <div class="footer-policy">
+                <p>
+                  <a href="/privacy-policy">개인정보 처리방침</a> |
+                  <a href="/terms-of-service">사이트 이용약관</a> |
+                  <a href="/cookie-policy">쿠키 정책</a> |
+                  <a href="/company-info">사업자 정보</a>
+                </p>
+              </div>
+              <div class="footer-signature">
+                <img src="/image/kayak.png" alt="가약 이미지" />
+              </div>
+            </div>
+          </div>
         </footer>
+
     </div>
+
+
+    <script>
+
+
+
+    //예약 테이블 생성 관련 스크립트
+    document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(".form-container");
+  const nextButton = document.querySelector(".next-btn");
+
+  nextButton.addEventListener("click", async (event) => {
+    event.preventDefault();
+
+    const generateReservationId = () => {
+      return Math.random().toString(36).substring(2, 8).toUpperCase();
+    };
+
+    const reservation_id = generateReservationId();
+    const customer_name = document.querySelector(".form-group input.name")?.value;
+    const phone_prefix = document.querySelector(".form-group .inline-fields select.small-input-mobile")?.value; 
+    const phone_number = phone_prefix + document.querySelector(".form-group input.small-input-mobile").value;
+    const backup_prefix = document.querySelector(".form-group .inline-fields select.small-input-backup-phone").value;
+    const backup_phone_number = backup_prefix + document.querySelector(".form-group input.small-input-backup-phone").value;
+    const rental_date = document.querySelector(".form-group .inline-fields input.small-input-counsel-date").value + " " + document.querySelector(".form-group .inline-fields select.small-input-time1").value + " " + document.querySelector(".form-group .inline-fields select.small-input-clock1").value;
+    const counsel_date = document.querySelector(".form-group .inline-fields input.small-input-rent-date").value + " " + document.querySelector(".form-group .inline-fields select.small-input-time2").value + " " + document.querySelector(".form-group .inline-fields select.small-input-clock2").value;
+    const email = document.querySelector(".form-group input.email").value;
+    const venue_address = document.querySelector(".form-group-top .form-group-detail .inline-fields input.small-input-postcode").value + " " + document.querySelector(".form-group-top .form-group-detail .inline-fields input.roadAddress").value + " " + document.querySelector(".form-group-top .form-group-detail .inline-fields input.detailAddress").value;
+    const requests = document.querySelector(".form-group-top textarea.requests").value;
+
+    try {
+      const response = await fetch("/api/reservations/add-with-products", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          reservation_id,
+          customer_name,
+          phone_number,
+          backup_phone_number,
+          rental_date,
+          counsel_date,
+          email,
+          venue_address,
+          requests,
+        }),
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        alert("예약이 완료되었습니다!");
+        window.location.href = "book_done";
+      } else {
+        alert("오류 발생: " + result.message);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("서버 오류가 발생했습니다.");
+    }
+  });
+});
+
+//예약 관련 끝
+
+
+
+  async function loadCartItems() {
+  try {
+    const response = await fetch('/api/cart'); // API 호출
+    const data = await response.json();
+
+    // 특정 테이블의 tbody 선택 (ID를 사용하여 정확히 지정)
+    const tableBody = document.querySelector('#dynamic-table-2 tbody');
+    tableBody.innerHTML = ''; // 기존 내용을 비웁니다.
+
+    // 숫자 포맷터 (소수점 제거 및 반점 추가)
+    const formatPrice = (price) => {
+      return Number(price).toLocaleString('en-US', { minimumFractionDigits: 0 });
+    };
+
+    // 총합 계산 변수 초기화
+    let totalQuantity = 0;
+    let totalOrderAmount = 0;
+    let totalDiscount = 0;
+
+    // 데이터 순회하며 동적으로 HTML 생성
+    data.forEach((item, index) => {
+      const paymentAmount = item.product_price - item.discount_price; // 결제 금액 계산
+
+      // 총합 계산
+      totalQuantity += item.quantity;
+      totalOrderAmount += item.product_price * item.quantity;
+      totalDiscount += item.discount_price * item.quantity;
+
+      // 각 제품의 기본 정보를 나타내는 행 생성
+      const productRow = `
+        <tr>
+          <td class="product-info-cell">
+            <img src="/image/product_list/product/${item.product_code}_1.png" alt="제품 이미지">
+            <div class="product-info-text">
+              <p>${item.product_name}</p>
+              <p>${item.product_code}</p>
+              <p>수량: ${item.quantity}개</p>
+              <p>컬러: ${item.product_color}</p>
+              <p>${formatPrice(item.product_price)}원</p>
+            </div>
+          </td>
+          <td>
+            <p class="discount-amount">${formatPrice(item.discount_price)}원</p>
+          </td>
+          <td>
+            <p class="payment-amount">${formatPrice(paymentAmount)}원</p>
+          </td>
+        </tr>
+      `;
+
+      // 옵션 정보를 나타내는 행 생성
+      const optionRow = `
+        <tr class="option-row" data-product-id="${item.product_code}"> <!-- 동일한 product_id 추가 -->
+          <td colspan="3">
+            선택${index + 1}: [${item.product_name} / ${formatPrice(item.product_price)}원] 
+            [수량: ${item.quantity}개] 
+            [컬러: ${item.product_color}]
+          </td>
+
+        </tr>
+      `;
+
+      // 테이블에 행 추가
+      tableBody.innerHTML += productRow + optionRow;
+    });
+
+    // 총 주문 금액 섹션 업데이트
+    const orderSummaryContainer = document.querySelector('.order-summary-right');
+    if (orderSummaryContainer) {
+      orderSummaryContainer.innerHTML = `
+        <div class="order-detail">
+          <span class="label">주문 상품 수</span>
+          <span class="value">${totalQuantity}</span>
+          <span class="value2">개</span>
+        </div>
+        <div class="order-detail">
+          <span class="label">주문 금액</span>
+          <span class="value">${formatPrice(totalOrderAmount)}</span>
+          <span class="value2">원</span>
+        </div>
+        <div class="order-detail">
+          <span class="label">할인 금액</span>
+          <span class="value">${formatPrice(totalDiscount)}</span>
+          <span class="value2">원</span>
+        </div>
+        <hr> <!-- 구분선 -->
+        <div class="order-detail total">
+          <span class="label"><strong>최종 결제 금액</strong></span>
+          <span class="value" style="color: red;"><strong>${formatPrice(totalOrderAmount - totalDiscount)}</strong></span>
+          <span class="value2"><strong>원</strong></span>
+        </div>
+      `;
+    }
+
+
+  } catch (error) {
+    console.error('장바구니 데이터를 불러오는 중 오류 발생:', error);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', loadCartItems);
+
+
+function execDaumPostcode() {
+    new daum.Postcode({
+        oncomplete: function(data) {
+            // 우편번호와 주소 정보를 해당 필드에 자동 입력
+            document.getElementById('postcode').value = data.zonecode; // 우편번호
+            document.getElementById('roadAddress').value = data.roadAddress; // 도로명 주소
+        }
+    }).open();
+}
+    </script>
+
+<!-- Daum 주소 API 스크립트 추가 -->
+<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script src="/js/counsel_book.js"></script>
 </body>
 </html>

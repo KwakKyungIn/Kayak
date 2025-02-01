@@ -22,17 +22,19 @@
             <!-- 예약 확인서 제목 및 코드 섹션 -->
             <div class="reservation-header">
                 <h1 class="reservation-main-title">방문 상담 예약 확인서</h1>
+                <div class="reservation-code">
+                    <label for="reservation-id">예약코드</label>
+                    <input type="text" id="reservation-id" placeholder="B-1227492">
+                    <button id="load-reservation-btn">조회</button>
+                </div>
             </div>
+            
         </section>
                     <!-- 예약 확인서 섹션 -->
                     <div class="reservation-wrapper">
                         <div class="reservation-container">
                             <!-- 주문 제품 정보 -->
                             <div class="order-info">
-                                <div class="image-container1">
-                                    <img src="/image/book_done.png" alt="상품 이미지" class="center-image1">
-                                </div>
-
                                 <div class="reservation-code">
                                   <label for="reservation-id">예약코드</label>
                                   <div class = "reservation_id">asd</div>
@@ -181,11 +183,12 @@
                           </div>
                         </div>
                       </footer>
+
                       
                       
     </div>
 
 
-<script src="/js/book_done.js"></script>
+<script src="/js/confirm_reservation.js"></script>
 </body>
 </html>

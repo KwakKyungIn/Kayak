@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "name": "A세트 플라워",
+    "name": "A세트 소파",
     "e_name": "SuBAF1",
     "file_name": "SuBAF1_1.png",
-    "mainImage" :"SuBAF1_main.png",
-    "sliderImages": ["SuBAF1_slider_1.png","SuBAF1_slider_2.png","SuBAF1_slider_3.png"],
-    "description" : "서브 세트 신부대기실의 a세트 플라워"
+    "mainImage" :"SuBAF1_main_1.png",
+    "sliderImages": ["SuBAF1_slider_1.png","SuBAF1_slider_2.png","SuBAF1_slider_3.png","SuBAF1_slider_4.png","SuBAF1_slider_5.png"],
+    "description" : "부드러운 소파, 화려한 꽃 장식으로 신부의 아름다움을 더욱 돋보이게 하고 웨딩의 감동을 극대화하는 대기실입니다. 하객들에게도 로맨틱하고 특별한 공간으로 기억될 것이며, 사진 속에서도 우아한 분위기가 남아 신부의 소중한 순간을 더욱 빛내도록 하겠습니다."
   }
 ]

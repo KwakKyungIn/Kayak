@@ -1,4 +1,3 @@
-//페이지 생성 추가
 fetch('/data/product_list/main_set/pillar/products.json') // JSON 파일 경로
 .then((response) => response.json())
 .then((data) => {
@@ -25,19 +24,25 @@ fetch('/data/product_list/main_set/pillar/products.json') // JSON 파일 경로
     const description = document.createElement('p');
     description.textContent = product.name;
 
-      // 찜 버튼 생성
+    // 찜 버튼 생성
     const heartButton = document.createElement('button');
     heartButton.classList.add('heart-button');
     heartButton.dataset.productCode = product.e_name; // 제품 코드 저장
-    heartButton.textContent = '♡'; // 기본 상태
 
-      // 찜 버튼 클릭 이벤트
+    // 하트 이미지 초기 상태
+    const heartImg = document.createElement('img');
+    heartImg.src = '/image/icons/heart_empty.png'; // 기본 빈 하트 이미지
+    heartImg.alt = '찜하기';
+    heartButton.appendChild(heartImg);
+
+    // 찜 버튼 클릭 이벤트
     heartButton.addEventListener('click', () => toggleHeart(product.e_name, heartButton));
 
     // div.product에 요소 추가
     productElement.appendChild(linkElement); // a 태그 추가
     productElement.appendChild(description); // p 태그 추가
     productElement.appendChild(heartButton); // 찜 버튼 추가
+
     // .product-grid에 product 추가
     productGrid.appendChild(productElement);
   });

@@ -2,10 +2,11 @@
     {
       "id": 1,
       "name": "A세트 플라워",
-      "e_name": "MaFlAF1",
-      "file_name": "MaFlAF1_1.png",
-      "mainImage" :"MaFlAF1_main.png",
-      "description" : "메인 세트 꽃 장식의 a세트 플라워"
-    }
+    "e_name": "MaFlAF1",
+    "file_name": "MaFlAF1_1.png",
+    "mainImage" :"MaFlAF1_main_1.png",
+    "sliderImages": ["MaFlAF1_slider_1.png","MaFlAF1_slider_2.png","MaFlAF1_slider_3.png","MaFlAF1_slider_4.png","MaFlAF1_slider_5.png","MaFlAF1_slider_6.png","MaFlAF1_slider_7.png","MaFlAF1_slider_8.png","MaFlAF1_slider_9.png"],
+    "description" : "꽃으로 장식된 웨딩홀은 로맨틱하고 우아한 분위기를 연출하며, 신랑과 신부의 특별한 순간을 더욱 빛나게 만들어 줍니다. 풍성한 꽃 장식으로 웨딩홀의 공간을 따뜻하고 생동감 있게 변화를 주세요."
+  }
   ]
   

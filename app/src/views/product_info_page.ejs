@@ -4,41 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>가약 - Custom Wedding</title>
-    <!-- CSS 파일 연결 -->
     <link rel="stylesheet" href="/css/product_info_page.css">
 </head>
 <body>
 
 <!-- 슬라이드 컨테이너 -->
 <div class="scroll-container">
-    <!-- 새로운 슬라이드 -->
+
+    <!-- 상단 메뉴 섹션 -->
     <section class="product_info_page-section1">
-        <!-- 오른쪽 상단 메뉴 -->
         <div class="menu">
             <a href="product_list_page">상품</a>
             <a href="book_page">예약</a>
             <a href="inquiry">문의</a>
-            <a href="#">확인</a>
+            <a href="confirm_reservation">확인</a>
         </div>
     </section>
 
-    <!-- 콘텐츠 섹션 -->
+    <!-- 제품 정보 섹션 -->
     <div class="product_info_page-section2">
-        <!-- 왼쪽 이미지 섹션 -->
         <div class="product_info_page-section2-sector1">
-            <!-- 이미지 동적 로드 -->
             <img id="product-main-image" src="" alt="제품 이미지">
         </div>
-        <!-- 오른쪽 정보 섹션 -->
         <div class="product_info_page-section2-sector2">
             <h2 id="product-name">제품명</h2>
             <p id="product-code" class="product_info_page-section2-sector2-product-code">제품 코드</p>
-            <div class="product_info_page-section2-sector2-product-description-box" id="product-description">
+            <div id="product-description" class="product_info_page-section2-sector2-product-description-box">
                 제품 설명이 여기에 표시됩니다.
             </div>
+            
             <div class="dropdown-menu">
                 <span class="dropdown-label">색상</span>
             </div>
+            
             <div class="custom-color-options">
                 <label class="custom-radio">
                     <input type="radio" name="custom-color" value="black">
@@ -49,6 +47,7 @@
                     <span class="checkmark checkmark-white"></span> 흰색
                 </label>
             </div>
+
             <div class="custom-buttons">
                 <button class="custom-inquire-button">서랍 넣기</button>
                 <button class="custom-cart-button">달력 확인</button>
@@ -77,6 +76,7 @@
         </div>
     </div>
 
+    <!-- 슬라이더 섹션 -->
     <section class="product_info_page-section3">
         <div class="slider-container">
             <div class="slider" id="product-slider">
@@ -86,6 +86,7 @@
         </div>
     </section>
 
+    <!-- 본품 구성 섹션 -->
     <section class="product_info_page-section35">
         <div>
             <h2>본품 구성</h2>
@@ -94,8 +95,8 @@
             <!-- 본품 구성 동적 로드 -->
         </div>
     </section>
-    
 
+    <!-- 추천 상품 섹션 -->
     <div class="product_info_page-section4">
         <h2>추천 상품</h2>
         <div class="product-grid2" id="recommended-products">
@@ -103,222 +104,57 @@
         </div>
     </div>
 
+    <!-- 푸터 섹션 -->
+    <footer class="footer">
+        <div class="footer-big-container">
+            <div class="footer-container">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <img src="/image/logo.png" alt="회사 로고">
+                    </div>
+                    <div class="footer-company">
+                        <h4>회사</h4>
+                        <p>사업자 주소 | 인천부평구 부개동 55-555</p>
+                        <p>사업자 등록 번호 | 00000-0000-0000-0000</p>
+                        <p>대표 전화번호 | (010) 9931 1981</p>
+                    </div>
+                    <div class="footer-service">
+                        <h4>고객 서비스</h4>
+                        <p><a href="/faq">자주 묻는 질문(FAQ)</a></p>
+                        <p><a href="/support">고객 지원/고객 문의</a></p>
+                        <p><a href="/returns">반품 및 환불 정책</a></p>
+                        <p><a href="/contact">영업팀과 문의</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-icons">
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="/image/instagram.png" alt="Instagram 아이콘">
+                    </a>
+                    <a href="https://www.kakaotalk.com" target="_blank">
+                        <img src="/image/kakaotalk.png" alt="KakaoTalk 아이콘">
+                    </a>
+                </div>
+                <div class="footer-policy">
+                    <p>
+                        <a href="/privacy-policy">개인정보 처리방침</a> |
+                        <a href="/terms-of-service">사이트 이용약관</a> |
+                        <a href="/cookie-policy">쿠키 정책</a> |
+                        <a href="/company-info">사업자 정보</a>
+                    </p>
+                </div>
+                <div class="footer-signature">
+                    <img src="/image/kayak.png" alt="가약 이미지">
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </div>
 
 <!-- JavaScript 연결 -->
-<script>
-    // URL의 id 파라미터 추출
-    const urlParams = new URLSearchParams(window.location.search);
-    const productId = urlParams.get('id');
-
-    // JSON 데이터 가져와서 콘텐츠 동적으로 생성
-    fetch('/data/products.json')
-        .then(response => response.json())
-        .then(data => {
-            // 해당 ID의 제품 데이터 검색
-            const product = data.find(item => item.e_name === productId);
-
-            if (product) {
-                // 제품명, 코드, 설명 및 메인 이미지 설정
-                document.getElementById('product-name').textContent = product.name;
-                document.getElementById('product-code').textContent = productId;
-                document.getElementById('product-main-image').src = `/image/products_info/${productId}/${product.mainImage}`;
-                document.getElementById('product-description').textContent = product.description;
-
-                const sliderContainer = document.getElementById('product-slider');
-                console.log('sliderImages:', product.sliderImages);
-                console.log(sliderContainer); // sliderContainer가 제대로 로드되었는지 확인
-
-                // 슬라이더 이미지 추가
-                product.sliderImages.forEach((image, index) => {
-                    const imgElement = document.createElement('img');
-                    imgElement.src = `/image/products_info/${productId}/slider_image/${image}`;
-                    imgElement.alt = `Product Image ${index + 1}`; // 순서에 따라 고유한 alt 설정
-                    sliderContainer.appendChild(imgElement);
-                });
-                // 슬라이더 초기화 함수 호출
-                initializeSlider();
-
-                // 본품 구성 추가
-                const supplementsContainer = document.getElementById('product-supplements');
-                product.supplements.forEach(supplement => {
-                    const supplementElement = document.createElement('div');
-                    supplementElement.classList.add('content-product');
-                    supplementElement.innerHTML = `
-                        <img src="/image/products_info/${productId}/supplements/${supplement.image}" alt="${supplement.name}">
-                        <p>${supplement.name}</p>
-                    `;
-                    supplementsContainer.appendChild(supplementElement);
-                });
-            } else {
-                alert('해당 제품을 찾을 수 없습니다.');
-            }
-        })
-        .catch(error => {
-            console.error('Error fetching product data:', error);
-        });
-
-
-
-
-        //여기서부터 있던거
-        window.onload = () => {
-    // 드롭다운 버튼 클릭 이벤트
-    document.querySelector('.dropbtn').onclick = () => {
-        dropdown();
-    };
-
-    // 각 메뉴 항목에 클릭 이벤트 추가
-    let fastfoods = document.getElementsByClassName('fastfood');
-    for (let i = 0; i < fastfoods.length; i++) {
-        fastfoods[i].onclick = function () {
-            showMenu(this.innerText); // 선택된 메뉴의 텍스트를 전달
-        };
-    }
-};
-
-// 드롭다운 열고 닫기
-let dropdown = () => {
-    let v = document.querySelector('.dropdown-content');
-    let dropbtn = document.querySelector('.dropbtn');
-    v.classList.toggle('show');
-    dropbtn.style.borderColor = v.classList.contains('show') ? '#3992a8' : 'rgb(94, 94, 94)';
-};
-
-// 선택된 메뉴 표시
-let showMenu = (value) => {
-    let dropbtn_icon = document.querySelector('.dropbtn_icon');
-    let dropbtn_content = document.querySelector('.dropbtn_content');
-    let dropbtn = document.querySelector('.dropbtn');
-
-    dropbtn_icon.innerText = '';
-    dropbtn_content.innerText = value;
-    dropbtn_content.style.color = '#252525';
-    dropbtn.style.borderColor = '#3992a8';
-};
-
-// 드롭다운 외부 클릭 시 닫기
-window.onclick = (e) => {
-    if (!e.target.matches('.dropbtn')) {
-        let dropdowns = document.getElementsByClassName('dropdown-content');
-        for (let i = 0; i < dropdowns.length; i++) {
-            let openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
-    }
-};
-
-// 슬라이더 초기화 함수
-function initializeSlider() {
-    const slider = document.querySelector(".slider");
-    const images = document.querySelectorAll(".slider img");
-    const pagination = document.querySelector(".pagination");
-
-    if (images.length === 0) {
-        console.error('No images found for slider!');
-        return;
-    }
-
-    let currentIndex = 0;
-    const slideCount = images.length;
-    const slideWidth = images[0].clientWidth;
-
-    // 앞뒤로 이미지를 복제
-    const firstClone = images[0].cloneNode(true);
-    const lastClone = images[images.length - 1].cloneNode(true);
-    slider.appendChild(firstClone);
-    slider.insertBefore(lastClone, slider.firstChild);
-
-    // 초기 위치 설정
-    slider.style.transform = `translateX(-${slideWidth}px)`;
-
-    // 페이지 인디케이터 생성
-    function createPagination() {
-        for (let i = 0; i < slideCount; i++) {
-            const dot = document.createElement("div");
-            dot.classList.add("dot");
-            if (i === 0) dot.classList.add("active");
-            pagination.appendChild(dot);
-
-            // 동그라미 클릭 이벤트
-            dot.addEventListener("click", function () {
-                currentIndex = i;
-                updateSlider();
-            });
-        }
-    }
-
-    createPagination();
-
-    // 슬라이더와 페이지 인디케이터 업데이트
-    function updateSlider() {
-        const dots = document.querySelectorAll(".pagination .dot");
-        slider.style.transition = "transform 0.3s ease-in-out";
-        slider.style.transform = `translateX(-${(currentIndex + 1) * slideWidth}px)`;
-
-        // 모든 동그라미 비활성화 후 현재 동그라미 활성화
-        dots.forEach(dot => dot.classList.remove("active"));
-        dots[currentIndex].classList.add("active");
-    }
-
-    // 무한 스크롤 처리
-    slider.addEventListener("transitionend", function () {
-        const dots = document.querySelectorAll(".pagination .dot");
-        if (currentIndex === -1) {
-            slider.style.transition = "none";
-            currentIndex = slideCount - 1;
-            slider.style.transform = `translateX(-${(currentIndex + 1) * slideWidth}px)`;
-        } else if (currentIndex === slideCount) {
-            slider.style.transition = "none";
-            currentIndex = 0;
-            slider.style.transform = `translateX(-${(currentIndex + 1) * slideWidth}px)`;
-        }
-
-        // 페이지 인디케이터 업데이트 추가
-        dots.forEach(dot => dot.classList.remove("active"));
-        dots[currentIndex].classList.add("active");
-    });
-
-    // 화살표 클릭 이벤트
-    document.querySelector(".arrow.next").addEventListener("click", function () {
-        currentIndex++;
-        if (currentIndex > slideCount) currentIndex = 0; // 안전 처리
-        updateSlider();
-    });
-
-    document.querySelector(".arrow.prev").addEventListener("click", function () {
-        currentIndex--;
-        if (currentIndex < -1) currentIndex = slideCount - 1; // 안전 처리
-        updateSlider();
-    });
-
-    // 화면 크기 조정 시 위치 재조정
-    window.addEventListener("resize", function () {
-        slider.style.transition = "none";
-        slider.style.transform = `translateX(-${(currentIndex + 1) * images[0].clientWidth}px)`;
-    });
-}
-
-//여기서 부터 제품 크기 코드
-// 모든 토글 버튼에 클릭 이벤트 추가
-document.querySelectorAll('.toggle-button').forEach(button => {
-    button.addEventListener('click', () => {
-        const content = button.parentElement.nextElementSibling;
-
-        // 상세 정보 표시/숨기기
-        if (content.style.display === 'block') {
-            content.style.display = 'none';
-            button.textContent = '+'; // 버튼 텍스트를 '+'로 변경
-        } else {
-            content.style.display = 'block';
-            button.textContent = '-'; // 버튼 텍스트를 '-'로 변경
-        }
-    });
-});
-
-</script>
+<script src="/js/product_info_page.js"></script>
 
 </body>
 </html>

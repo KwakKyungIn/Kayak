@@ -26,21 +26,26 @@ document.querySelectorAll('.tab-item > a').forEach(tab => {
     }
   });
   //탭 메뉴 끝~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
   const updateHeartStatus = async () => {
     try {
       const response = await fetch('/api/heart');
-      const heartedProducts = await response.json(); // 찜된 제품 목록
+      const data = await response.json(); // 응답을 객체로 받아옴
+      const heartedProducts = data.product_codes || []; // 배열만 추출
+  
+      console.log("찜한 제품 목록:", heartedProducts);
+  
       const heartButtons = document.querySelectorAll('.heart-button');
   
       heartButtons.forEach((button) => {
         const productCode = button.dataset.productCode;
-        if (heartedProducts.some((product) => product.product_code === productCode)) {
-          button.classList.add('hearted'); // 찜된 상태
-          button.textContent = '❤️';
+        const heartImg = button.querySelector('img');
+  
+        if (heartedProducts.includes(productCode)) {
+          button.classList.add('hearted');
+          heartImg.src = '/image/icons/heart_filled.png'; // 찬 하트 이미지
         } else {
-          button.classList.remove('hearted'); // 찜되지 않은 상태
-          button.textContent = '♡';
+          button.classList.remove('hearted');
+          heartImg.src = '/image/icons/heart_empty.png'; // 빈 하트 이미지
         }
       });
     } catch (error) {
@@ -50,24 +55,27 @@ document.querySelectorAll('.tab-item > a').forEach(tab => {
   
   // 페이지 로드 시 찜 상태 업데이트
   updateHeartStatus();
-
+  
   const toggleHeart = async (productCode, button) => {
     try {
+      const heartImg = button.querySelector('img');
       if (button.classList.contains('hearted')) {
         // 찜 해제 요청
         console.log("코드", productCode);
         await fetch(`/api/heart/remove/${productCode}`, { method: 'DELETE' });
         button.classList.remove('hearted');
-        button.textContent = '♡';
+        heartImg.src = '/image/icons/heart_empty.png'; // 빈 하트 이미지
       } else {
         // 찜 추가 요청
+        console.log("코드", productCode);
         await fetch('/api/heart/add', {
+          
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ product_code: productCode }),
         });
         button.classList.add('hearted');
-        button.textContent = '❤️';
+        heartImg.src = '/image/icons/heart_filled.png'; // 찬 하트 이미지
       }
     } catch (error) {
       console.error('찜 상태 변경 오류:', error);

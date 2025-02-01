@@ -6,7 +6,7 @@ body {
     background-color: rgb(242, 242, 242);
     color: black;
     position: relative;
-    height: 100vh; /* 슬라이드 높이에 맞게 유지 */
+    height: 100%; /* 슬라이드 높이에 맞게 유지 */
     overflow: auto; /* 전체 페이지의 스크롤 제거 */
     
 }
@@ -512,6 +512,7 @@ body {
 
 
 .scroll-container {
+  position: relative; /* 자식 요소 배치를 자연스럽게 지원 */
     width: 95%;
     height: 100%;
     flex-direction: column; /* 섹션을 세로로 배치 */
@@ -567,3 +568,93 @@ body {
     font-size: 12px;
     color: #555;
 }
+
+.footer {
+    background-color: #f9f9f9; /* 배경색 */
+    color: #a1a1a1; /* 텍스트 색 */
+    font-family: Arial, sans-serif;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 가로 방향 중앙 정렬 */
+  }
+  .footer-big-container {
+    width: 80%; /* 부모 요소의 너비를 기준으로 */
+  }
+  
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  .footer-service {
+  padding-left: 100px;
+  }
+  .footer-logo img {
+    max-width: 130px; /* 로고 크기 */
+  }
+  
+  .footer-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  .footer-info h4 {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .footer-info p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #dcdcdc;
+    padding-top: 10px;
+  }
+  
+  .footer-icons img {
+    width: 30px; /* 아이콘 크기 */
+    margin-right: 10px;
+  }
+  
+  .footer-policy {
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  .footer-signature img {
+    max-width: 60px; /* '가약' 이미지 크기 */
+  }
+  /* 공통 스타일링 */
+  .footer a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit; /* 텍스트 색상 상속 */
+    transition: color 0.3s ease; /* 호버 효과 추가 */
+  }
+  
+  .footer a:hover {
+    color: #007BFF; /* 링크에 호버 시 색상 변경 */
+  }
+  
+  /* "개인정보 처리방침" 등 정책 간격 조정 */
+  .footer-policy a {
+    margin: 0 10px; /* 링크 간격 조정 */
+  }
+  
+  .footer-policy a:first-child {
+    margin-left: 0; /* 첫 링크의 왼쪽 간격 제거 */
+  }
+  
+  .footer-policy a:last-child {
+    margin-right: 0; /* 마지막 링크의 오른쪽 간격 제거 */
+  }
+  
+  

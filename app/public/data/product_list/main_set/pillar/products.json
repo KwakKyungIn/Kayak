@@ -1,21 +1,21 @@
 [
   {
     "id": 1,
-    "name": "A세트 플라워",
+    "name": "A세트 에테르눔",
     "e_name": "MaPAF1",
     "file_name": "MaPAF1_1.png",
-    "mainImage" :"MaPAF1_main.png",
-    "sliderImages": ["MaPAF1_slider_1.png","MaPAF1_slider_2.png","MaPAF1_slider_3.png"],
-    "description" : "메인 세트 기둥 장식의 A세트 플라워"
+    "mainImage" :"MaPAF1_main_1.png",
+    "sliderImages": ["MaPAF1_slider_1.png","MaPAF1_slider_2.png","MaPAF1_slider_3.png","MaPAF1_slider_4.png","MaPAF1_slider_5.png","MaPAF1_slider_6.png","MaPAF1_slider_7.png","MaPAF1_slider_8.png","MaPAF1_slider_9.png"],
+    "description" : "고대 신전의 우아함과 화려함을 현대적으로 재해석한 웨딩 공간입니다. 그리스나 로마 신전을 연상시키는 디자인과 자연의 아름다움을 담은 꽃 장식이 결합되어, 웅장하면서도 로맨틱한 분위기를 연출합니다. 고전적인 우아함과 자연의 생동감을 동시에 원하시는 신랑 신부께 추천되는 메인세트 입니다."
   },  
   {
     "id": 1,
-    "name": "A세트 플라워",
+    "name": "B세트 에테르눔",
     "e_name": "MaPBF1",
     "file_name": "MaPBF1_1.png",
-    "mainImage" :"MaPBF1_main.png",
-    "sliderImages": ["MaPBF1_slider_1.png","MaPBF1_slider_2.png","MaPBF1_slider_3.png"],
-    "description" : "메인 세트 기둥 장식의 B세트 플라워"
+    "mainImage" :"MaPBF1_main_1.png",
+    "sliderImages": ["MaPBF1_slider_1.png","MaPBF1_slider_2.png","MaPBF1_slider_3.png","MaPBF1_slider_4.png","MaPBF1_slider_5.png","MaPBF1_slider_6.png","MaPBF1_slider_7.png"],
+    "description" : "고대 신전의 우아함과 화려함을 현대적으로 재해석한 웨딩 공간입니다. 그리스나 로마 신전을 연상시키는 디자인과 자연의 아름다움을 담은 꽃 장식이 결합되어, 웅장하면서도 로맨틱한 분위기를 연출합니다. 고전적인 우아함과 자연의 생동감을 동시에 원하시는 신랑 신부께 추천되는 메인세트 입니다."
   }
   ]
   

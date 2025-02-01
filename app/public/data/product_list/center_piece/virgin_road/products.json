@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "name": "A세트 플라워",
+    "name": "A세트 버진로드",
     "e_name": "CeVAF1",
     "file_name": "CeVAF1_1.png",
-    "mainImage" :"CeVAF1_main.png",
-    "sliderImages": ["CeVAF1_slider_1.png","CeVAF1_slider_2.png","CeVAF1_slider_3.png"],
-    "description" : "센터피스의 버진로드 a세트 플라워"
+    "mainImage" :"CeVAF1_main_1.png",
+    "sliderImages": ["CeVAF1_slider_1.png","CeVAF1_slider_2.png","CeVAF1_slider_3.png","CeVAF1_slider_4.png","CeVAF1_slider_5.png","CeVAF1_slider_6.png","CeVAF1_slider_7.png","CeVAF1_slider_8.png","CeVAF1_slider_9.png","CeVAF1_slider_10.png","CeVAF1_slider_11.png","CeVAF1_slider_12.png","CeVAF1_slider_13.png"],
+    "description" : "결혼식 테이블의 중앙을 장식하는 주요 아이템으로, 웨딩홀의 분위기를 완성하고 하객들에게 깊은 인상을 남기는 데 중요한 역할을 합니다.\n다양한 크기의 센터피스입니다. 풍부한 웨딩장식을 원하시는 고객분들을 위한 상품 입니다."
   }
 ]

@@ -482,3 +482,68 @@ padding-left: 100px;
 .footer-policy a:last-child {
   margin-right: 0; /* 마지막 링크의 오른쪽 간격 제거 */
 }
+
+
+
+.order-summary {
+  display: flex; /* 가로 정렬 */
+  justify-content: space-between; /* 양쪽 정렬 */
+  align-items: flex-start; /* 텍스트 위쪽 정렬 */
+  margin-top: 20px; /* 상단 여백 */
+  padding: 10px 0; /* 패딩만 추가 */
+  border-top: 1.5px solid #555; /* 위쪽 구분선 */
+  border-bottom: 2px solid #555; /* 아래쪽 구분선 */
+}
+
+.order-summary-left {
+  flex: 1; /* 왼쪽 영역 너비 */
+  text-align: left; /* 텍스트 왼쪽 정렬 */
+  font-size: 14px; /* 글자 크기 */
+  font-weight: bolder;
+  line-height: 1; /* 줄 간격 고정 */
+  padding-left: 10px;
+}
+
+.order-summary-left p {
+  margin: 0; /* 모든 여백 제거 */
+  padding: 0; /* 모든 패딩 제거 */
+  line-height: 2.5; /* 줄 간격 유지 */
+}
+
+.order-summary-right {
+  flex: 2; /* 오른쪽 영역 더 넓게 */
+  text-align: left; /* 전체 텍스트 왼쪽 정렬 */
+  font-size: 10px;
+  line-height: 3; /* 줄 간격 */
+}
+
+.order-detail {
+  display: flex; /* 가로 정렬 */
+  justify-content: space-between; /* 좌우 정렬 */
+}
+
+.order-detail .label {
+  text-align: left; /* 레이블 왼쪽 정렬 */
+  flex: 1;
+}
+
+.order-detail .value {
+  text-align: right; /* 값 오른쪽 정렬 */
+  flex: 1;
+}
+
+.order-detail .value2 {
+  text-align: left; /* 값 오른쪽 정렬 */
+  flex: 0.1;
+}
+
+.order-summary-right hr {
+  margin: 10px 0; /* 구분선 위아래 간격 */
+  border: 0;
+  border-top: 1px solid #ddd; /* 구분선 스타일 */
+}
+
+.order-detail.total {
+  margin-top: 10px;
+  font-weight: bold; /* 강조 */
+}
